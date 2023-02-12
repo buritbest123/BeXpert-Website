@@ -1,0 +1,15 @@
+/* screens and laptops */
+@media only screen and (min-width: 769px) {
+    .img-fluid {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+/* for phones and tablets */
+@media only screen and (min-width: 320px) {
+    .img-fluid {
+        width: 100%;
+        height: 75px;
+    }
+}
