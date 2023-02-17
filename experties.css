@@ -17,12 +17,10 @@
     }
 
 /* for cv / resume button */
-    .btn{
+    #btn-cv-resume{
         margin-top: -5%;
         width: 20%;
     }
-
-    
 }
 
 /* for phones and tablets */
@@ -51,3 +49,6 @@
 }
 
 /* for all screen sizes */
+.btn {
+    margin: 0;
+}
