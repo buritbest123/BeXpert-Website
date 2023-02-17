@@ -1,18 +1,53 @@
 @media only screen and (min-width: 801px) {
+/* for 3 contact icons in topic: Contact Me */
     .contact_icon {
         border-radius: 50%;
         padding: 5px;
         width: 40px;
         height: 40px;
     }
+
+    .a-contact-style {
+        text-decoration: none;
+    }
+
+/* topic of each info (eg. My Bio) */
+    .form-label {
+        font-size: 35px;
+    }
+
+/* for cv / resume button */
+    .btn{
+        margin-top: -5%;
+        width: 20%;
+    }
+
+    
 }
 
 /* for phones and tablets */
 @media only screen and (max-width: 800px) {
+/* for 3 contact icons in topic: Contact Me */
     .contact_icon {
         border-radius: 50%;
         padding: 3px;
         width: 35px;
         height: 35px;
     }
+
+    .a-contact-style {
+        text-decoration: none;
+    }
+
+/* topic of each info (eg. My Bio) */
+    .form-label {
+        font-size: 20px;
+    }
+
+/* responsive table */
+    .div-responsive-table {
+        overflow-x:auto;
+    }
 }
+
+/* for all screen sizes */
