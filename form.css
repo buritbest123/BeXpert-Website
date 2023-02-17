@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    zoom: 0.97;
 }
 
 body {
+    margin-top: 20px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -22,20 +24,7 @@ body {
     1px solid #000000;
 }
 
-.FillIn h1 {
-    font-size: 36px;
-    margin-bottom: 25px;
-}
-
-.FillIn form {
-    font-size: 20px;
-}
-
-.FillIn form .form-group {
-    margin-bottom: 12px;
-}
-
 .FillIn form input[type="submit"] {
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 20px;
 } 
