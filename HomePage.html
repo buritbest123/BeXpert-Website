@@ -14,16 +14,22 @@
     <body>
         <main class="container-fluid" style="background-color: aliceblue;">
         <header><h5>BeXpert</h5></header>
-        <nav><a class="link" href="HomePage.html"><img class="profile-picture" src="Logo.png" alt="profile-picture"></a></nav>
+        <nav>
+            <a class="link" href="HomePage.html"><img class="profile-picture" src="Logo.png" height="40px" width="40px" alt="profile-picture"></a>
         <form>
-            <label for="'Search">Search</label>
-            <input type="text" id="Search"><br>
+            <div class="input-group rounded">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                <span class="input-group-text border-0" id="search-addon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
         </form>
-        <nav><a class="link" href="experties_in_detail.html">Expert</a></nav>
-        <nav><a class="link" href="How_to_Use.html">How to</a></nav>
-        <nav><a class="link" href="AboutUs.html">About us</a></nav>
-        <nav><a class="link" href="login.html">Login</a></nav>
-        <nav><a class="link" href="register.html">Register</a></nav>
+            <a class="link" href="experties_in_detail.html">Expert</a>
+            <a class="link" href="How_to_Use.html">How to</a>
+            <a class="link" href="AboutUs.html">About us</a>
+            <a class="link" href="login.html">Login</a>
+            <a class="link" href="register.html">Register</a>
+        </nav>
         <footer>
 
         </footer>
