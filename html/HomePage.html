@@ -3,7 +3,7 @@
 
     <head>
         <!--our css-->
-        <link rel="stylesheet" href="css\HomePage.css">
+        <link rel="stylesheet" href="../css/HomePage.css">
         <!--boostrap-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,17 +15,31 @@
 
     <body>
         <main class="container-fluid" style="background-color: aliceblue;">
-        <header><h5 style="background-color: black; text-align: center; color: aliceblue; padding: 20px; margin: 20px; border-radius: 5px;">BeXpert</h5></header>
-        <nav><a class="link" href="HomePage.html">Logo</a></nav>
-        <form>
-            <label for="'Search">Search</label>
-            <input type="text" id="Search"><br>
-        </form>
-        <nav><a class="link" href="experties_in_detail.html">Expert</a></nav>
-        <nav><a class="link" href="How_to_Use.html">How to</a></nav>
-        <nav><a class="link" href="AboutUs.html">About us</a></nav>
-        <nav><a class="link" href="login.html">Login</a></nav>
-        <nav><a class="link" href="register.html">Register</a></nav>
+        <header class="beexpert_h5">BeXpert</header>
+
+        <nav>
+            <a class="link" href="HomePage.html"><img src="../picture/Logo.png" height="40px" width="40px"></a>
+            <form>
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                </div>
+            </form>
+            <a class="link" href="experties_in_detail.html">Expert</a>
+            <a class="link" href="How_to_Use.html">How to</a>
+            <a class="link" href="AboutUs.html">About us</a>
+            <a class="link" href="login.html">Login</a>
+            <a class="link" href="register.html">Register</a>
+        </nav>
+
+        <div class="card text-bg-dark aboutproduct">
+            <img src="../picture/aboutproduct.jpg" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="card-title">About Our Product</h5>
+              <p class="card-text">Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai</p>
+              <p class="card-text"><small>Ford Ranger Raptor!!!!!!!</small></p>
+            </div>
+          </div>
+        
         <footer>
 
         </footer>
