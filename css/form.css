@@ -43,8 +43,7 @@ nav a:hover {
         padding: 20px;
         border-radius: 12px;
         background: #ffffff;
-        border:
-        1px solid #000000;
+        border: 1px solid #000000;
     }
     
     .FillIn form input[type="submit"] {
