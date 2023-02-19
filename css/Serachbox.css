@@ -200,3 +200,21 @@
   width: 20%;
   height: 30%;
 }
+
+
+/*/ Animation Fade in When user cilck in/**/
+
+.search-container, .recommend-profiles, .logo {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
