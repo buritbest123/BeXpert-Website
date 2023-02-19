@@ -3,37 +3,58 @@
 
 
 <head>
+  <!-- CSS. LINK-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/Serachbox.css"> 
     <link rel="stylesheet" href="HomePage.html">
-    <link rel="stylesheet" type="text/css" href="../css/management.css" />
-    <title>Search Filter</title>
+    <title>Search The Expert!</title>
+
+    <!-- for nav & footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+        $('#nav_header').load('../header_footer/nav.html');
+        });
+    </script>
+
 </head>
 
 </head>
 <body>
+
+   <!-- for nav -->
+   <main class="container-fluid" style="background-color: aliceblue;">
+    <header class="beexpert_h5">BeXpert</header>
+    <nav>
+      <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
+      <div id="nav_header" style="width: 100%; height: 55px;">
+      </div>
+    </nav>
+    <br>
+
+    <!-- the Search page part-->
   <div class="logo">
     <img src="../picture/Logo.png" width="250px" alt="Logo">
   </div>
+
+  <!-- Search box and Filter-->
   <div class="search-container">
     <input type="text" class="search-input">
     <button class="search-by">Search by <span class="arrow">&#9660;</span></button>
     <div class="search-options">
       <ul>
-        <li>Name</li>
-        <li>Skills</li>
-        <li>Experience</li>
+        <li id="name-option">Name</li>
+        <li id="Skills-option">Skills</li>
+        <li id="Experience-option">Experience</li>
       </ul>
     </div>
     <button class="search-button">Search</button>
+   
+
   </div>
 
-  <!-- New part-->
-  <div class= "searc-result"> </div>
-  <body>
-
-  </body>
+  
  <!-- The Recommand Profile -->
   <div class="recommend-profiles">
     <div class="profile-block">
@@ -42,7 +63,53 @@
     <p>Skills: Skill 1, Skill 2, Skill 3</p>
     <a href="experties_in_detail.html">Learn More</a>
  
+    <!-- When The user search and click it-->
+<script>
+const searchInput = document.querySelector('.search-input');
+const searchByBtn = document.querySelector('.search-by');
+const searchOptions = document.querySelector('.search-options');
+const searchBtn = document.querySelector('.search-button');
+const nameOption = document.querySelector('#name-option');
+const skillsOption = document.querySelector('#skills-option');
+const experienceOption = document.querySelector('#experience-option');
 
+let selectedOption = 'name'; // default selected option
+
+searchByBtn.addEventListener('click', () => {
+  searchOptions.classList.toggle('show');
+});
+
+nameOption.addEventListener('click', () => {
+  selectedOption = 'name';
+  searchByBtn.textContent = 'Search by Name';
+  searchOptions.classList.remove('show');
+});
+
+skillsOption.addEventListener('click', () => {
+  selectedOption = 'skills';
+  searchByBtn.textContent = 'Search by Skills';
+  searchOptions.classList.remove('show');
+});
+
+experienceOption.addEventListener('click', () => {
+  selectedOption = 'experience';
+  searchByBtn.textContent = 'Search by Experience';
+  searchOptions.classList.remove('show');
+});
+
+searchBtn.addEventListener('click', () => {
+  const searchValue = searchInput.value.toLowerCase();
+  // pass the searchValue and selectedOption to the result page
+  window.location.href = `experties_in_detail.html?searchValue=${searchValue}&searchOption=${selectedOption}`;
+});
+
+searchBtn.addEventListener('click', () => {
+  const searchValue = searchInput.value.toLowerCase();
+  // pass the searchValue and selectedOption to the result page
+  window.location.href = `experties_in_detail.html?searchValue=${searchValue}&searchOption=${selectedOption}`;
+});
+
+    </script>
 </div>
 <footer>
 

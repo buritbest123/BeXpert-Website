@@ -218,3 +218,17 @@
     opacity: 1;
   }
 }
+
+/* for phones and tablets */
+@media only screen and (max-width: 800px) {
+  .search-container {
+    width: 90%;
+  }
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-pic {
+    margin: 0 auto 10px;
+  }
+}
