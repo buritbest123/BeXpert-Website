@@ -1,0 +1,19 @@
+@media only screen and (min-width: 801px) {
+
+    Header{
+        text-align: center;
+        color: black;
+    }
+
+
+
+}
+/* for phones and tablets */
+@media only screen and (max-width: 800px) {
+    Header{
+        text-align: center;
+        color: black;
+    }
+
+
+}

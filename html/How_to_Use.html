@@ -4,11 +4,53 @@
         <!-- Page title -->
         <title>BeXpert: How to Use</title>
         <!-- link to css -->
-        <link rel="stylesheet" type="text/css" href="../css/management.css" />
-        <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" type="text/css" href="/css/howto.css" />
+        <!-- for nav & footer -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+            });
+        </script>
     </head>
 
     <body>
-        <h1>How to Use BeXpert</h1>
+         <!-- for nav -->
+         <main class="container-fluid" style="background-color: aliceblue;">
+            <header class="beexpert_h5">BeXpert</header>
+            <nav>
+              <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
+              <div id="nav_header" style="width: 100%; height: 55px;">
+              </div>
+            </nav>
+        <br>
+        <header>
+            <h1>
+                How to Use BeXpert
+            </h1>
+        </header>
+        <article class="Company">
+            <h3>For Company</h3>
+            <ul>
+                <li>Login or Register to Bexpert</li>
+                <li>Search for the position your company wants (search by skills)</li>
+                <li>Choose the right person for your organization by going to their profile for more information and CV/Resume</li>
+                <li>Contact them using the contact provided</li>
+            </ul>
+        </article>
+        <br>
+        <article class="User">
+            <h3>For User</h3>
+            <ul>
+                <li>Login or Register to Bexpert</li>
+                <li>Create a portfolio by adding your personal information (Fullname, Nickname, Birthday, Email, Contact Number)</li>
+                <li>Add Skills, Certificates, CV/Resume and also the position you're interested in</li>
+                <li>Wait for the Company to contact you via given contact </li>
+
+            </ul>
+        </article>
+
+
+
     </body>
 </html>
