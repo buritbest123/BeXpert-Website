@@ -1,103 +1,193 @@
 .logo {
-    text-align: center;
-    margin-top: 50px;
-  } /*/ Logo middle */
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  width: 60%;
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+
+.search-by {
+  background-color: lightgray;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-container .search-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  z-index: 1;
+}
+
+.search-container:hover .search-options {
+  display: block;
+}
+
+.search-by .arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-container:hover .search-by .arrow {
+  transform: rotate(0deg);
+}
+
+.search-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.search-by.active + .search-options {
+  display: block;
+}
+
+.search-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-options li {
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-button {
+  background-color: rgb(28, 181, 232);
+  color: rgb(9, 9, 9);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/*/ Profile recommand /*/
+.recommend-profiles {
+  margin-top: 50px;
+  text-align: center;
   
-  .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-  }
-  .search-container {
-    position: relative;
-  }
-   /*/ The option box will under the search bar and search by */
+}
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.block {
+  width: 60%;
+  margin: 50px auto;
+  border: 2px solid #9f2222;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.block h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.block hr {
+  margin: 20px 0;
+  border: 100%;
+  border-top: 2px solid #9f2222;
+  height: 1px;
+}
+
+.profile {
+  margin: 20px 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+ 
+}
+
+/*/ Rounded Images profile image/**/
+.rounded {
+  border-radius: 50%;
   
-  .search-input {
-    width: 60%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    margin-right: 10px;
-  }
-  
-  .search-by {
-    background-color: lightgray;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .search-container .search-options {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0px 0px 10px #ccc;
-    z-index: 1;
-  }
-  
-  .search-container:hover .search-options {
-    display: block;
-  }
-  
-  /*/ The arrow part*/
-  .search-by .arrow {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 10px;
-    transform: rotate(90deg);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .search-container:hover .search-by .arrow {
-    transform: rotate(0deg);
-  }
-  /*/  Make the arrow go up when user click it */
-  
-  /*/ Filter part*/
-  .search-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin-top: 5px;
-    width: 100%;
-  }
-  
-  .search-by.active + .search-options {
-    display: block;
-  }
-  
-  .search-options ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .search-options li {
-    margin: 0;
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  
-  /*/ Search Button*/ 
-  .search-button {
-    background-color: rgb(28, 181, 232);
-    color: rgb(9, 9, 9);
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  /*/ New  part */
+}
+
+.recommend-profiles{
+  border: 10px solid red;
+  width: 250px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background-color: lightgray;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
