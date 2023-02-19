@@ -1,3 +1,4 @@
+@media only screen and (min-width: 801px) {
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +16,12 @@ body {
     text-align: left;
     color: aliceblue;
     padding: 2px;
+    margin-bottom: 0px;
+}
+
+#nav_header {
+    width: 100%;
+    height: 55px;
 }
 
 header, footer {
@@ -98,4 +105,9 @@ nav a:hover {
     height: 400px;
     filter: blur(blur);
     justify-content: center;
+}
+}
+
+/* for phones and tablets */
+@media only screen and (max-width: 800px) {
 }
