@@ -18,14 +18,17 @@
     box-sizing: border-box;
 }
 
+.beexpert_h5 {
+    background-color: black;
+    text-align: left;
+    color: aliceblue;
+    padding: 2px;
+}
+
 body {
     color: black;
     margin: 0;
     padding: 0 ;
-}
-
-label {
-    color: aliceblue;
 }
 
 form {
@@ -84,8 +87,7 @@ nav a:hover {
 .aboutproduct {
     width: 800px;
     height: 400px;
-    filter: blur(blur);
-    justify-content: center;
+    align-self: center;
 }
 }
 
