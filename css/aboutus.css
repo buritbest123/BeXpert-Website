@@ -1,0 +1,39 @@
+@media only screen and (min-width: 801px) {
+
+    Header{
+        text-align: center;
+        color: black;
+    }
+    .AboutUs{
+        display: flex;
+        text-align: center;
+    }
+    .abouttext{
+        text-align: center;
+        margin: 100px;
+        margin-top: 10px;
+        width: 100;
+        border-radius: 20px;
+    }
+
+
+}
+/* for phones and tablets */
+@media only screen and (max-width: 800px) {
+    Header{
+        text-align: center;
+        color: black;
+    }
+    .AboutUs{
+        display: flex;
+        text-align: center;
+    }
+    .abouttext{
+        text-align: center;
+        margin: 100px;
+        margin-top: 10px;
+        width: 100;
+        border-radius: 20px;
+    }
+
+}

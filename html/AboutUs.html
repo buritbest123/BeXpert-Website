@@ -4,14 +4,48 @@
         <!-- Page title -->
         <title>BeXpert: About Us</title>
         <!-- link to css -->
-        <link rel="stylesheet" type="text/css" href="../css/management.css" />
-        <!-- <link rel="stylesheet" href="form.css"> -->
+        <link rel="stylesheet" type="text/css" href="/css/AboutUs.css" />
+
+        <!-- style for table -->
+        <style>
+            table, tr, th, td {
+            border: 1px solid black;
+            } </style>
+
+        <!-- for nav & footer -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+            });
+        </script>
     </head>
 
     <body>
-        <h1>About Us</h1>
-        <p>
-            BeXpert is an online portfolio that allows people to create their portfolios online. Tell about themselves, demonstrate their skills, and include their experience, certificates, and CVs/resumes for each position they want to work in to let the company see them. It is also a place for a company to find the best candidate for a position in their company.
-        </p>
+        <!-- for nav -->
+        <main class="container-fluid" style="background-color: aliceblue;">
+        <header class="beexpert_h5">BeXpert</header>
+        <nav>
+          <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
+          <div id="nav_header" style="width: 100%; height: 55px;">
+          </div>
+        </nav>
+        <br>
+
+        <!-- About Us page -->
+        <header>
+            <h1>About US</h1>
+        </header>
+        <br>
+        <article class="AboutUs">
+           <section class="abouttext">
+            BeXprt is an online portfolio that allows people to create their portfolios online. 
+            Tell about themselves, demonstrate their skills, and include their experience, certificates, and CVs/resumes for each position they want to work in to let the company see them.
+             It is also a place for a company to find the best candidate for a job in their company.
+           </section>
+        </article>
+             
+        <!-- Table for member -->
+        
     </body>
 </html>
