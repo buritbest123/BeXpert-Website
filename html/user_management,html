@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Account Management</title>
+	<link rel="stylesheet" href="../css/user_management.css">
+</head>
+<body>
+	<h1>User Account Management</h1>
+	<form>
+		<h2>Add New Account</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email">
+		<button type="submit">Add Account</button>
+	</form>
+	<h2>Existing User Accounts</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Username</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>user1</td>
+				<td>user1@example.com</td>
+				<td>
+					<button>Edit</button>
+					<button>Delete</button>
+				</td>
+			</tr>
+			<tr>
+				<td>user2</td>
+				<td>user2@example.com</td>
+				<td>
+					<button>Edit</button>
+					<button>Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
