@@ -20,22 +20,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/"></script>
     <script src="../js/form.js"></script>
+
+    <!-- for nav & footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+            });
+    </script>
 </head>
 
 <body>
     <nav>
-        <a class="link" href="../html/index.html"><img class="profile-picture" src="../picture/Logo.png" height="40px" width="40px" alt="profile-picture"></a>
-    <form>
-        <div class="input-group rounded">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            
-          </div>
-    </form>
-        <a class="link" href="experties_in_detail.html">Expert</a>
-        <a class="link" href="How_to_Use.html">How to</a>
-        <a class="link" href="AboutUs.html">About us</a>
-        <a class="link" href="login.html">Login</a>
-        <a class="link" href="register.html">Register</a>
+        <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
+        <div id="nav_header" style="width: 100%; height: 40px;">
+        </div>
     </nav>
     
     <div class="FillIn">
