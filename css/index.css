@@ -1,96 +1,37 @@
-@media screen and (min-width: 801px) {
-
-    nav {
-        background-color: rgb(0, 0, 0);
-        padding: 5px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
-
 @media only screen and (min-width: 801px) {
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.beexpert_h5 {
-    background-color: black;
-    text-align: left;
-    color: aliceblue;
-    padding: 2px;
-}
-
-body {
-    color: black;
-    margin: 0;
-    padding: 0 ;
-}
-
-form {
-    margin: 0px;
-}
-
-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 100%;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-size: 18px
-}
-
-nav a {
-    display: block;
-    float: left;
-    color: #FDFEFE;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #D2B4DE;
-}
-
-@media screen and (max-width: 800px) {
-
-    nav {
-        background-color: rgb(0, 0, 0);
-        padding: 5px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    
+    * {
+        margin: 0;
+        padding: 0;
+        /*box-sizing: border-box;*/
     }
 
-nav a {
-    display: block;
-    float: left;
-    color: #FDFEFE;
-    text-decoration: none;
-}
+    body {
+        color: black;
+        margin: 0;
+        padding: 0 ;
+    }
 
-nav a:hover {
-    color: #D2B4DE;
-}
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 18px
+    }
 
-.aboutproduct {
-    width: 800px;
-    height: 400px;
-    align-self: center;
-}
+    .cardadj {
+        width: 400px;
+        height: 300px;
+        justify-content: center;
+    }
 }
 
 /* for phones and tablets */
 @media only screen and (max-width: 800px) {
+
 }

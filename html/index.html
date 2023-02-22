@@ -17,6 +17,9 @@
                 $(function(){
                     $('#nav_header').load('../header_footer/nav.html');
                 });
+                $(function(){
+                    $('#nav_footer').load('../header_footer/footer.html');
+                });
             </script>
     </head>
 
@@ -27,27 +30,28 @@
             </div>
         </nav>
 
-        <body>
-            <div class="card text-bg-dark aboutproduct">
-                <img src="../picture/aboutproduct.jpg" class="card-img">
+        <section>
+            <div class="card text-bg-dark cardadj" style="border-radius: 0%;">
+                <img src="../picture/aboutproduct.jpg" class="card-img" style="border-radius: 0%;">
                 <div class="card-img-overlay">
                   <h5 class="card-title">About Our Product</h5>
                   <p class="card-text">Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai</p>
                   <p class="card-text"><small>Ford Ranger Raptor!!!!!!!</small></p>
                 </div>
             </div>
-    
-            <div class="card text-bg-dark aboutproduct">
-                <img src="../picture/aboutproduct.jpg" class="card-img">
+        </section>
+ 
+        <section>
+            <div class="card text-bg-dark cardadj" style="border-radius: 0%;">
+                <img src="../picture/aboutproduct.jpg" class="card-img" style="border-radius: 0%;">
                 <div class="card-img-overlay">
                   <h5 class="card-title">Description</h5>
                   <p class="card-text">Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai ... Jub Meng Mee Arai</p>
                   <p class="card-text"><small>Ford Ranger Raptor!!!!!!!</small></p>
                 </div>
             </div>
-            <footer>
+        </section>
 
-            </footer>
-        </body>
+        <nav id="nav_footer" style="width: 100%; height: 200px;"></nav>
     </body>
 </html>
