@@ -108,104 +108,46 @@
 }
 
 /*/ Profile recommand /*/
-.recommend-profiles {
-  margin-top: 50px;
-  text-align: center;
-  
-}
-.profile-pic {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-.block {
-  width: 60%;
-  margin: 50px auto;
-  border: 2px solid #9f2222;
-  border-radius: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.block h2 {
-  text-align: center;
-  font-size: 24px;
-}
-
-.block hr {
-  margin: 20px 0;
-  border: 100%;
-  border-top: 2px solid #9f2222;
-  height: 1px;
-}
-
-.profile {
+.recommendations-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-  border: 2px solid rgb(0, 255, 255);
-  border-radius: 10px;
-  padding: 10px;
-  width: 80%;
-  max-width: 500px;
-  box-shadow: 0px 0px 10px #ccc;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.profile-pic {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+.column {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: calc(33.33% - 20px);
 }
 
-.profile-info {
-  flex: 1;
-}
-
-.profile-name {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.profile-description {
-  font-size: 16px;
+.column h3 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.profile-skills {
-  display: flex;
-  flex-wrap: wrap;
+.column p {
+  margin: 10px 0;
 }
 
-.skill {
-  background-color: lightgray;
-  color: #333;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+.column a {
+  color: #007bff;
+  text-decoration: none;
 }
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+
 
 /*/ Rounded Images profile image/**/
 .rounded {
   border-radius: 50%;
   
 }
-
-.recommend-profiles{
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-top: 50px;
-  text-align: center;
-  width: 20%;
-  height: 30%;
-}
-
 
 /*/ Animation Fade in When user cilck in/**/
 
