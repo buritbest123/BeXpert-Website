@@ -37,10 +37,24 @@
 </head>
 <body>
     <!-- nav -->
+    <!-- <nav>
+        <iframe src="./nav.html" frameborder="0"></iframe>
+        <div id="nav_header" style="width: 100%; height: 55px;">
+        </div>
+    </nav> -->
+    <!-- nav + footer -->
+    <script>
+        $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+        });
+        $(function(){
+            $('#nav_footer').load('../header_footer/footer.html');
+        });
+    </script>
+    <!-- nav -->
     <nav>
-        <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
-        <!-- <div id="nav_header" style="width: 100%; height: 55px;">
-        </div> -->
+        <div id="nav_header" style="height: 40px; display: flex;">
+        </div>
     </nav>
 
     <!-- background band -->
@@ -177,6 +191,9 @@
             </div>
         </div>
     </div>
+
+    <!-- footer -->
+    <nav id="nav_footer" style="width: 100%; height: 200px;"></nav>
 
 </body>
 </html>
