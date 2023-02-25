@@ -2,63 +2,84 @@
 <html lang="en">
 <head>
     <title>BeXpert - Register</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap v5.1.3 CDNs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
     <!-- CSS File -->
     <link rel="stylesheet" href="../css/form.css">
-        <!-- for nav & footer -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>
-            $(function(){
-                $('#nav_header').load('../header_footer/nav.html');
-                });
-        </script>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- Javascript -->
+    <script src="../js/form.js"></script>    
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav>
-        <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
-        <div id="nav_header" style="width: 100%; height: 40px;">
-        </div>
+        <a href="../html/index.html"><img src="../picture/Logo.png" height="40px" width="40px" alt="profile-picture"></a>
+        <a href="../html/Serach.html">Search</a>
+        <a href="../html/experties_in_detail.html">Expert</a>
+        <a href="../html/How_to_Use.html">How to</a>
+        <a href="../html/AboutUs.html">About us</a>
+        <a href="../html/login.html">Login</a>
     </nav>
-
+    <!-- Registration form -->
     <div class="FillIn" style="zoom:0.95; margin-top: 20px"> 
         <h1 class="text-center" style="margin-top: -30px; margin-bottom:-20px"><img src=../picture/Logo.png width="80px"></h1>
-        <class="needs-validation">
-            <!-- Create a form to validate Enter your name seperate into First Name and Last Name-->
-            <div class="form-group was-validated">
-                <label class="form-label" for="username">Username</label>
-                <input class="form-control" type="username" id="username" required>
-            </div>
-            <div class="form-group was-validated">
-                <label class="form-label" for="firstName">First Name</label>
-                <input class="form-control" type="text" id="firstName" name="name" required>
-                <label class="form-label" for="lastName">Last Name</label>
-                <input class="form-control" type="text" id="lastName" name="name" required>
-            </div>
-            <div class="form-group was-validated">
-                <label class="form-label" for="email">Email Address</label>
-                <input class="form-control" type="email" id="email" required>
-            </div>
-            <div class="form-group was-validated">
-                <label class="form-label" for="address">Address</label>
-                <input class="form-control" type="text" id="address" name="address" required>
-            </div>
-            
+        <form id="register-form" class="needs-validation">
+
+        <!-- Input fields for username -->
+        <div class="form-group was-validated">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="username" id="username" required>
+        </div>
+
+        <!-- Input fields for first and last name -->
+        <div class="form-group was-validated">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="form-control" type="text" id="firstName" name="name" required>
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="form-control" type="text" id="lastName" name="name" required>
+        </div>
+
+        <!-- Input field for email address -->
+        <div class="form-group was-validated">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-control" type="email" id="email" required>
+        </div>
+
+        <!-- Input field for address -->
+        <div class="form-group was-validated">
+            <label class="form-label" for="address">Address</label>
+            <input class="form-control" type="text" id="address" name="address" required>
+        </div>
+        
+        <!-- Input field for birth date -->
             <div class="form-group was-validated">
                 <label class="form-label" for="BDAge">Birth Date</label>
                 <input class="form-control" type="date" id="BDAge" name="BDAge" required>
             </div>
-            
+
+        <!-- Input field for Password -->
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Create Password</label>
                 <input class="form-control" type="password" id="password" required>
             </div>
+
+        <!-- This is a submit button -->
             <input class="btn btn-success w-100" type="submit" value="Register" style="margin-top:20px;">
         </form>
-        <p class="text-center mt-3 mb-0" style="margin-top:20px;">Already have an account? <a href="login.html">Sign In</a></p>
+
+        <!-- pop-up message -->
+            <div id="success-message" class="alert alert-success d-none" role="alert">
+            Registration successful!
+            </div>
+
+        <!-- This is a paragraph element with center alignment, top margin of 3 and bottom margin of 0, and inline style of 20px top margin. -->
+        <p class="text-center mt-3 mb-0" style="margin-top:20px;">
+            <!-- This is an anchor element with a hyperlink reference to "login.html", used for navigation to the login page. -->
+            Already have an account? <a href="login.html">Sign In</a></p>
     </div>
 </body>
 </html>
