@@ -142,7 +142,7 @@
 }
 
 
-
+/*/
 /*/ Rounded Images profile image/**/
 .rounded {
   border-radius: 50%;
@@ -166,16 +166,40 @@
   }
 }
 
+
+
 /* for phones and tablets */
+
 @media only screen and (max-width: 800px) {
   .search-container {
     width: 90%;
+    margin: 30px auto;
   }
-  .profile {
-    flex-direction: column;
+  
+  .search-input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-
-  .profile-pic {
-    margin: 0 auto 10px;
+  
+  .search-by {
+    margin-bottom: 10px;
+  }
+  
+  .search-button {
+    margin-left: 0;
+  }
+  
+  .recommendations-container {
+    width: 100%;
+  }
+  
+  .column {
+    width: 100%;
+  }
+  
+  .logo {
+    margin-top: 20px;
   }
 }
+
