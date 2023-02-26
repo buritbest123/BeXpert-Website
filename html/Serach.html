@@ -10,27 +10,25 @@
     <link rel="stylesheet" href="HomePage.html">
     <title>Search The Expert!</title>
 
-    <!-- for nav & footer -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        $(function(){
-          $('#nav_header').load('../header_footer/nav.html');
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>
+       $(function(){
+       $('#nav_header').load('../header_footer/nav.html');
+       });
+       $(function(){
+            $('#nav_footer').load('../header_footer/footer.html');
         });
-        $(function(){
-                    $('#nav_footer').load('../header_footer/footer.html');
-                });
-    </script>
-
+   </script>
 </head>
 
-</head>
+
+
 <body>
-   <!-- for nav -->
-    <nav>
-      <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
-      <div id="nav_header" style="width: 100%; height: 40px;">
-      </div>
-    </nav>
+  <!-- for nav -->
+  <nav>
+    <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+    <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
+  </nav>
 
     <!-- the Search page part-->
   <div class="logo">
@@ -153,5 +151,9 @@ searchBtn.addEventListener('click', () => {
   window.location.href = `experties_in_detail.html?searchValue=${searchValue}&searchOption=${selectedOption}`;
 }); -->
    <!--</script>--> 
+</body>
+<footer>
+  <nav id="nav_footer" style="width: 100%; height: 200px;"></nav>
+</footer>
 
 </html>
