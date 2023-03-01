@@ -54,11 +54,11 @@
         text-align: center;
     }
     .abouttext{
-        text-align: center;
-        margin: 100px;
+        text-align:center;
+        margin: 50px;
         margin-top: 10px;
-        width: 100px;
-        border-radius: 20px;
+        width: 500px;
+        /* border-radius: 20px; */
     }
     .container {
         padding: 0px;
