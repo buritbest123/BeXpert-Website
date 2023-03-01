@@ -45,21 +45,20 @@
   cursor: pointer;
 }
 
+
+/*/ Drop down /*/
 .search-container .search-options {
   display: none;
   position: absolute;
   top: 40px;
   left: 0;
-  background-color: white;
   width: 100%;
   padding: 10px;
-  box-shadow: 0px 0px 10px #ccc;
   z-index: 1;
 }
 
-.search-by.active + .search-options,
-.search-options.active {
-  display: none;
+.search-container:hover .search-options {
+  display: block;
 }
 
 .search-by .arrow {
@@ -72,6 +71,24 @@
 
 .search-container:hover .search-by .arrow {
   transform: rotate(0deg);
+}
+
+.search-options {
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 5px;
+  margin-top: 5px;
+  
+}
+
+.search-by.active + .search-options,
+.search-options.active {
+  display: block;
+}
+
+.search-by.active + .search-options {
+  display: none;
 }
 
 /*/Click serach/*/
