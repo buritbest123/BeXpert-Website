@@ -1,4 +1,8 @@
 @media only screen and (min-width: 801px) {
+    .logo {
+        text-align: center;
+        margin-top: 10px;
+      }
 
     Header{
         text-align: center;
@@ -30,23 +34,30 @@
         background-color: white;
         border: solid white 2px;
     }
+    .profile-picture{
+        border-radius: 25px;
+    }
 
 }
 /* for phones and tablets */
 @media only screen and (max-width: 800px) {
+    .logo {
+        text-align: center;
+        margin-top: 10px;
+      }
     Header{
         text-align: center;
         color: black;
     }
     .AboutUs{
-        display: flex;
+        display:flex;
         text-align: center;
     }
     .abouttext{
         text-align: center;
         margin: 100px;
         margin-top: 10px;
-        width: 100;
+        width: 100px;
         border-radius: 20px;
     }
     .container {
