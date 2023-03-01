@@ -6,28 +6,24 @@
         <!-- link to css -->
         <link rel="stylesheet" type="text/css" href="/css/AboutUs.css" />
 
-        <!-- style for table -->
-        <style>
-            table, tr, th, td {
-            border: 1px solid black;
-            } </style>
-
-        <!-- for nav & footer -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
             $(function(){
             $('#nav_header').load('../header_footer/nav.html');
             });
+            $(function(){
+                 $('#nav_footer').load('../header_footer/footer.html');
+             });
         </script>
     </head>
 
     <body>
         <!-- for nav -->
-        <nav>
-          <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
-          <div id="nav_header" style="width: 100%; height: 40px;">
-          </div>
-        </nav>
+    <nav>
+        <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+        <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
+    </nav>
+
         <br>
         <!-- About Us page -->
         <header>
@@ -62,15 +58,16 @@
                 <!-- about text-->
                 <section class="dummy_text">
                     Navaluck Duwa, or Janice, a sophomore at the Faculty of Information and Communication Technology, Mahidol University. 
-                     I am a detailed and responsible person  also a team player, where I serve as President of the MUICT Speakers Club. 
+                    she is a detailed and responsible person also a team player, where she serves as President of the MUICT Speakers Club. 
                      Janice is interested in Database where her expected major is Database and Intelligent Systems, 
                      she would love to work as a data analyst. She is also increasing her knowledge in the field of database where 
                      she applied to a Google Data Analysis course. 
                 </section>
             </article>
+        <!-- </article> -->
 
         <!-- INFO 2 (Ramita)-->
-        <article class="container">
+        <!-- <article class="container"> -->
             <article class="column">
                 <div class="bannerimage" alt="Responsive image">
                     <!-- product profile -->
@@ -93,9 +90,10 @@
 
                 </section>
             </article>
+        <!-- </article> -->
 
         <!-- INFO 3 (Phawida) --> 
-        <article class="container">
+        <!-- <article class="container"> -->
             <article class="column">
                 <div class="bannerimage" alt="Responsive image">
                     <!-- profile picture-->
@@ -116,9 +114,10 @@
                       and constant self-improvement, she  believe she can thrive in any role.
                 </section>
             </article>
+        <!-- </article> -->
     
         <!-- INFO 4 (Burit) -->
-        <article class="container">
+        <!-- <article class="container"> -->
             <article class="column">
                 <div class="bannerimage" alt="Responsive image">
                     <!-- profile picture -->
@@ -141,9 +140,10 @@
                     work with companies that share their values and offer excellent work-life balance and amenities, such as Agoda.
                 </section>
             </article>
+        <!-- </article> -->
 
         <!-- INFO 5 -->
-        <article class="container">
+        <!-- <article class="container"> -->
             <article class="column">
                 <div class="bannerimage" alt="Responsive image">
                     <!-- product profile -->
@@ -158,7 +158,12 @@
                 <section class="dummy_text">
                     hello
                 </section>
-            </article>
+        </article>
+    </article>
         
+        <!-- footer -->
+        <footer id="nav_footer" style="width: 100%; height: 200px;"></footer>
+
     </body>
 </html>
+

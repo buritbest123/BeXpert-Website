@@ -5,22 +5,24 @@
         <title>BeXpert: How to Use</title>
         <!-- link to css -->
         <link rel="stylesheet" type="text/css" href="/css/howto.css" />
-        <!-- for nav & footer -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
             $(function(){
             $('#nav_header').load('../header_footer/nav.html');
             });
+            $(function(){
+                 $('#nav_footer').load('../header_footer/footer.html');
+             });
         </script>
     </head>
 
     <body>
-         <!-- for nav -->
-            <nav>
-              <!-- <iframe src="./nav.html" frameborder="0"></iframe> -->
-              <div id="nav_header" style="width: 100%; height: 40px;">
-              </div>
-            </nav>
+    <!-- for nav -->
+    <nav>
+        <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+        <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
+    </nav>
         <br>
 
         <!-- To create a header in order to put the topic -->
@@ -53,8 +55,8 @@
 
             </ul>
         </article>
-
-
-
+    
     </body>
+    <!-- footer -->
+    <nav id="nav_footer" style="width: 100%; height: 200px;"></nav>
 </html>
