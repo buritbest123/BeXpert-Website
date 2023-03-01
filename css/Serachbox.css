@@ -1,3 +1,5 @@
+
+/*/ Picture of website/*/
 .logo {
   text-align: center;
   margin-top: 50px;
@@ -8,6 +10,7 @@
   margin: 0 auto;
 }
 
+/*/ Do the Search box /*/
 .search-container {
   display: flex;
   align-items: center;
@@ -34,6 +37,7 @@
   margin-right: 10px;
 }
 
+/*/ When the user cilck 'Search by' it will have the option to help user find easliy/*/
 .search-by {
   background-color: lightgray;
   padding: 10px 20px;
@@ -80,12 +84,17 @@
   padding: 5px;
   margin-top: 5px;
   width: 100%;
+  
 }
 
-.search-by.active + .search-options {
+.search-by.active + .search-options,
+.search-options.active {
   display: block;
 }
 
+.search-by.active + .search-options {
+  display: none;
+}
 
 
 .search-options ul {
@@ -105,6 +114,7 @@
   margin-left: 5px;
 }
 
+/*/Click serach/*/
 .search-button {
   background-color: rgb(28, 181, 232);
   color: rgb(9, 9, 9);
@@ -140,6 +150,7 @@
   margin: 10px 0;
 }
 
+/*/ When user cilck Learn More /*/
 .column a {
   color: #007bff;
   text-decoration: none;
@@ -150,12 +161,6 @@
 }
 
 
-/*/
-/*/ Rounded Images profile image/**/
-.rounded {
-  border-radius: 50%;
-  
-}
 
 /*/ Animation Fade in When user cilck in/**/
 

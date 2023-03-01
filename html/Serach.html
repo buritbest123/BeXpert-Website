@@ -45,11 +45,37 @@
         <li id="Skills-option">Skills</li>
         <li id="Experience-option">Experience</li>
       </ul>
+      <script> 
+      
+      function handleClickOutside(event) {
+        const searchContainer = document.getElementById("search-container");
+        if (searchContainer && !searchContainer.contains(event.target)) {
+          const options = document.querySelector(".search-by.active + .search-options");
+          if (options) {
+            options.classList.remove("active");
+          }
+        }
+      }
+      
+      document.addEventListener("click", handleClickOutside);
+      </script>
+    <script> const searchByButtons = document.querySelectorAll(".search-by");
+     searchByButtons.forEach(function(button) {
+       button.addEventListener("click", function() {
+         const options = this.nextElementSibling;
+         if (options.classList.contains("active")) {
+           options.classList.remove("active");
+         } else {
+           options.classList.add("active");
+         }
+       });
+     });</script>
+    
     </div>
     <button class="search-button">Search</button>
 
  <!-- For the filter option (Serach by) -->   
-    <script>  
+  <script>  
  // Get all the search options 
 const searchOptions = document.querySelectorAll('.search-options li');
 // Add click event listener to each search option
