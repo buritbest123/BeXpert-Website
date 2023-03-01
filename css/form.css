@@ -19,10 +19,15 @@ nav a:hover {
     color: #D2B4DE;
 }
 
+nav img {
+    margin-top: 6px;
+    margin-bottom: -4px;
+}
+
 /* CSS rules for screens wider than 800px */
 @media screen and (min-width: 801px) {
     nav {
-        background-color: rgb(20, 20, 20);
+        background-color: rgb(0, 0, 0);
         padding: 5px;
         overflow: hidden;
         display: flex;
@@ -87,3 +92,4 @@ nav a:hover {
     border: 1px solid #000000;
     }
 }
+
