@@ -21,7 +21,8 @@
     }
 
     .sectionindex {
-        margin: 40px;
+        padding: 40px;
+        background-image: url("../picture/indexsectionpic.jpg");
     }
 
     .cardd {
@@ -31,6 +32,20 @@
 
     .cardtitle {
         color: #000;
+    }
+
+    .card.text-bg-dark.cardd {
+        border-radius: 80px;
+    }
+
+    .card-img {
+        border-radius: 80px;
+    }
+
+    .seemoretosearch {
+        color: aliceblue;
+        display: flex;
+        justify-content: end;
     }
 
 }
