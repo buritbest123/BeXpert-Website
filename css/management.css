@@ -31,6 +31,10 @@
     display: flex;
     justify-content: space-evenly;
   }
+
+  .form-control.contact {
+    width: 75%;
+  }
       
 }
 
@@ -59,4 +63,8 @@
     margin-top: 10px;
     margin-left: 10px;
    }
+
+   .form-control.contact {
+    width: 100%;
+  }
 }

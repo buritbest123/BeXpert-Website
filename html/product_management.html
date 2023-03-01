@@ -51,70 +51,73 @@
                 <!-- Bio -->
                 <label class="form-label" for="text">My Bio</label>
                 <!-- edit -->
-                <textarea placeholder="Tell everyone about you..." class="form-control" type="email" id="email" required></textarea>
+                <textarea placeholder="Tell everyone about you..." class="form-control" type="text" id="text" required></textarea>
 
                 <!-- Experience -->
                 <br><br>
-                <label class="form-label" for="text">My Experience</label>
+                <label class="form-label" for="experience-text">My Experience</label>
 
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion accordion-flush" id="accordionFlushExperience">
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            University
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <!-- edit -->
-                            <textarea placeholder="Tell everyone about you..." class="form-control" type="email" id="email" required></textarea>
-                        </div>
-                      </div>
+                        <h2 class="accordion-header" id="flush-headingUniversityExperience">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUniversityExperience" aria-expanded="false" aria-controls="flush-collapseUniversityExperience">
+                                University
+                            </button>
+                        </h2>
+                        <div id="flush-collapseUniversityExperience" class="accordion-collapse collapse" aria-labelledby="flush-headingUniversityExperience" data-bs-parent="#accordionFlushExperience">
+                            <div class="accordion-body">
+                        <!-- edit -->
+                        <textarea placeholder="Tell everyone about you..." class="form-control" id="experience-text" required></textarea>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            High School
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <!-- edit -->
-                            <textarea placeholder="Tell everyone about you..." class="form-control" type="email" id="email" required></textarea>
-                        </div>
-                      </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSchoolExperience">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSchoolExperience" aria-expanded="false" aria-controls="flush-collapseSchoolExperience">
+                        High School
+                    </button>
+                </h2>
+                <div id="flush-collapseSchoolExperience" class="accordion-collapse collapse" aria-labelledby="flush-headingSchoolExperience" data-bs-parent="#accordionFlushExperience">
+                    <div class="accordion-body">
+                        <!-- edit -->
+                        <textarea placeholder="Tell everyone about you..." class="form-control" id="experience-text" required></textarea>
                     </div>
-                  </div>
-
-
+                </div>
+            </div>
+        </div>
                 <!-- Education -->
                 <br><br>
-                <label class="form-label" for="text">My Education</label>
+                <label class="form-label" for="education-text">My Education</label>
                 
-                    <!-- buttons for education -->
-                    <p>
-                        <button class="btn btn-primary collapsed" data-bs-toggle="collapse" data-bs-target="#collapseUniversity" aria-expanded="false" aria-controls="collapseUniversity">
-                          University
-                        </button>
-                        <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSchool" aria-expanded="false" aria-controls="collapseSchool">
-                          High School
-                        </button>
-                    </p>
-                    <!-- details for education -->
-                    <div class="collapse" id="collapseUniversity">
-                        <div class="card card-body">
-                            <!-- edit -->
-                            University
-                            <textarea placeholder="Tell everyone about you..." class="form-control" type="email" id="email" required></textarea>
-                        </div>
-                    </div>  
-                    <div class="collapse" id="collapseSchool">
-                        <div class="card card-body">
-                            <!-- edit -->
-                            High School
-                            <textarea placeholder="Tell everyone about you..." class="form-control" type="email" id="email" required></textarea>
+                <!-- buttons for education -->
+                <div class="accordion accordion-flush" id="accordionFlushEducation">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingUniversityEducation">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUniversityEducation" aria-expanded="false" aria-controls="flush-collapseUniversityEducation">
+                                University
+                            </button>
+                        </h2>
+                        <div id="flush-collapseUniversityEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingUniversityEducation" data-bs-parent="#accordionFlushEducation">
+                            <div class="accordion-body">
+                                <!-- edit -->
+                                <textarea placeholder="Tell everyone about you..." class="form-control" id="education-text" required></textarea>
+                            </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSchoolEducation">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSchoolEducation" aria-expanded="false" aria-controls="flush-collapseSchoolEducation">
+                                High School
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSchoolEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingSchoolEducation" data-bs-parent="#accordionFlushEducation">
+                            <div class="accordion-body">
+                                <!-- edit -->
+                                <textarea placeholder="Tell everyone about you..." class="form-control" id="education-text" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Skills -->
                 <br><br>
@@ -130,24 +133,24 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
+                            <td><input type="text" class="form-control" required></td>
                         </tr>
                     </table>
                 </div>
@@ -157,16 +160,17 @@
                 <br><br>
                 <label class="form-label" for="text">Contact Me</label>
                 <br>
-                <a class="a-contact-style" href="https://www.linkedin.com/in/ramita-deeprom-tingting/"><img class="contact_icon" src="https://cdn-icons-png.flaticon.com/512/179/179330.png"> Ramita Deeprom</a>
-                <br>
-                <a class="a-contact-style" href="mailto: ramita.deeprom@gmail.com"><img height="40px" class="contact_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/800px-Circle-icons-mail.svg.png"> ramita.deeprom@gmail.com</a>
-                <br>
-                <a class="a-contact-style" href="tel: 0866021559"><img height="40px" class="contact_icon" src="https://freesvg.org/img/phone-call-icon.png"> 086-602-1559</a>
+                <img class="contact_icon" src="https://cdn-icons-png.flaticon.com/512/179/179330.png"> LinkedIn
+                    <input type="text" class="form-control contact" required> <br>
+                <img height="40px" class="contact_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/800px-Circle-icons-mail.svg.png"> Email
+                    <input type="text" class="form-control contact" required> <br>
+                <img height="40px" class="contact_icon" src="https://freesvg.org/img/phone-call-icon.png"> Phone Number
+                    <input type="text" class="form-control contact" required>
 
                 <!-- save and reset -->
                 <br><br>
                 <button type="submit" class="btn btn-primary">Save</button>
-                <a href="experties_in_detail.html"><button type="reset" class="btn btn-primary">Cancel</button></a>
+                <a href="javascript:history.back()"><button type="reset" class="btn btn-primary">Cancel</button></a>
             </div>
         </div>
     </div>
