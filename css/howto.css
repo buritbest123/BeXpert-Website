@@ -25,7 +25,12 @@
     #user{
         text-align: center;
     }
-
+    #comhow{
+        width: 600px;
+    }
+    #userhow{
+        width: 600px;
+    }
 
 
 }
@@ -48,6 +53,12 @@
         border-radius: 20px;
         background-color:lightcyan;
         border: solid black 2px;
+    }
+    #comhow{
+        width: 450px;
+    }
+    #userhow{
+        width: 450px;
     }
 
 
