@@ -86,6 +86,8 @@
   display: block;
 }
 
+
+
 .search-options ul {
   list-style: none;
   padding: 0;
@@ -96,6 +98,11 @@
   margin: 0;
   padding: 5px;
   cursor: pointer;
+}
+
+.search-options li.selected::after {
+  content: '\2713';
+  margin-left: 5px;
 }
 
 .search-button {
@@ -110,8 +117,9 @@
 /*/ Profile recommand /*/
 .recommendations-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .column {
