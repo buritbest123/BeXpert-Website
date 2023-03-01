@@ -45,8 +45,51 @@
         <li id="Skills-option">Skills</li>
         <li id="Experience-option">Experience</li>
       </ul>
+      <script> 
+      
+      function handleClickOutside(event) {
+        const searchContainer = document.getElementById("search-container");
+        if (searchContainer && !searchContainer.contains(event.target)) {
+          const options = document.querySelector(".search-by.active + .search-options");
+          if (options) {
+            options.classList.remove("active");
+          }
+        }
+      }
+      
+      document.addEventListener("click", handleClickOutside);
+      </script>
+    <script> const searchByButtons = document.querySelectorAll(".search-by");
+     searchByButtons.forEach(function(button) {
+       button.addEventListener("click", function() {
+         const options = this.nextElementSibling;
+         if (options.classList.contains("active")) {
+           options.classList.remove("active");
+         } else {
+           options.classList.add("active");
+         }
+       });
+     });</script>
+    
     </div>
     <button class="search-button">Search</button>
+
+ <!-- For the filter option (Serach by) -->   
+  <script>  
+ // Get all the search options 
+const searchOptions = document.querySelectorAll('.search-options li');
+// Add click event listener to each search option
+searchOptions.forEach((option) => {
+option.addEventListener('click', (event) => {
+// Remove the selected class from all options
+searchOptions.forEach((option) => {
+option.classList.remove('selected');
+    });
+// Add the selected class to the clicked option
+event.target.classList.add('selected');
+  });
+})
+</script>
   </div>
 
   
@@ -55,40 +98,44 @@
  <div class="recommendations-container">
   <article class="column">
     <div class="rounded">
-      <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
+      <img src="https://drive.google.com/uc?export=view&id=1L93ySujh_CoF-RKcd_fn_lYKRJHYxI6O"  width="50px">
       </div>
        <h3>Ramita Deeprom</h3>
-       <section>Skills: Skill 1, Skill 2, Skill 3</section>
+       <section>Ramita Deeprom (Tingting) a sophomore at the Faculty of ICT, Mahidol University.
+        with a keen interest in Business Analyst and software.</section>
        <a href="experties_in_detail.html">Learn More</a>
     <!-- content for the first recommended box goes here -->
   </article>
   
   <article class="column">
     <div class="rounded">
-      <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
+      <img src="https://drive.google.com/uc?export=view&id=1Kldb68Qs1Jg66yekVGhTUIRWvXmZkaCY"  width="50px">
       </div>
        <h3>Phawida Phungchuen</h3>
-       <section>Skills: Skill 1, Skill 2, Skill 3</section>
+       <section>Phawida Phungchuen (Berry) a sophomore at the Faculty of ICT, Mahidol University.
+        She has a passion for programming started at a young age.</section>
        <a href="experties_in_detail_1.html">Learn More</a>
     <!-- content for the second recommended box goes here -->
   </article>
   
   <article class="column">
     <div class="rounded">
-      <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
+      <img src="https://drive.google.com/uc?export=view&id=1kGC-zQpll7fLaMvZw7ZoJJWqe0CplsE2"  width="50px">
       </div>
        <h3>Burit Sihabut</h3>
-       <section>Skills: Skill 1, Skill 2, Skill 3</section>
+       <section> Burit Sihabut (Best) a sophomore at the Faculty of ICT, Mahidol University.
+        He is a passionate software engineer who combines logic and creativity to provide the best solutions possible. </section>
        <a href="experties_in_detail_2.html">Learn More</a>
     <!-- content for the third recommended box goes here -->
   </article>
 
   <article class="column">
     <div class="rounded">
-      <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
+      <img src="https://drive.google.com/uc?export=view&id=1AEEzvktRRThUMjnX1I_lIm3tuTqu2ElI"  width="50px">
       </div>
        <h3>Navaluck Duwa</h3>
-       <section>Skills: Skill 1, Skill 2, Skill 3</section>
+       <section> Navaluck Duwa (Janice) a sophomore at the Faculty of ICT, Mahidol University. 
+        she is a detailed and responsible person also a team player, where she serves as President of the MUICT Speakers Club.</section>
        <a href="experties_in_detail_3.html">Learn More</a>
     <!-- content for the third recommended box goes here -->
   </article>
@@ -98,7 +145,7 @@
       <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
       </div>
        <h3>Suwiboon Chamniwikaikangwan</h3>
-       <section>Skills: Skill 1, Skill 2, Skill 3</section>
+       <section>Suwiboon Chamniwikaikangwan (Pond) a sophomore at the Faculty of ICT, Mahidol University. He is an expert in graphic design and a passionate software engineer. </section>
        <a href="experties_in_detail_4.html">Learn More</a>
     <!-- content for the third recommended box goes here -->
   </article>
@@ -152,8 +199,7 @@ searchBtn.addEventListener('click', () => {
 }); -->
    <!--</script>--> 
 </body>
-<footer>
-  <nav id="nav_footer" style="width: 100%; height: 200px;"></nav>
-</footer>
+<!-- footer -->
+<footer id="nav_footer" style="width: 100%;"></footer>
 
 </html>
