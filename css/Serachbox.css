@@ -43,7 +43,6 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  position: relative;
 }
 
 .search-container .search-options {
@@ -58,8 +57,9 @@
   z-index: 1;
 }
 
-.search-container:hover .search-options {
-  display: block;
+.search-by.active + .search-options,
+.search-options.active {
+  display: none;
 }
 
 .search-by .arrow {
@@ -72,28 +72,6 @@
 
 .search-container:hover .search-by .arrow {
   transform: rotate(0deg);
-}
-
-.search-options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 5px;
-  margin-top: 5px;
-  width: 100%;
-  
-}
-
-.search-by.active + .search-options,
-.search-options.active {
-  display: block;
-}
-
-.search-by.active + .search-options {
-  display: none;
 }
 
 /*/Click serach/*/

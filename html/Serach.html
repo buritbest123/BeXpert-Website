@@ -42,11 +42,14 @@
     <div class="search-options">
       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
       <ul>
-        <button type="button" class="btn btn-danger" id="name-option">Name</button>
-        <button type="button" class="btn btn-warning"id="Skills-option">Skills</button>
-        <button type="button" class="btn btn-success" id="Experience-option">Experience</button>
+        <button type="button" class="btn btn btn-primary" id="name-option">Name</button>
+        <button type="button" class="btn btn btn-primary"id="Skills-option">Skills</button>
+        <button type="button" class="btn btn btn-primary" id="Experience-option">Experience</button>
       </ul>
       </div>
+
+
+      <!-- Make button still here don't disappear-->
     <script> const searchByButtons = document.querySelectorAll(".search-by");
      searchByButtons.forEach(function(button) {
        button.addEventListener("click", function() {
@@ -57,8 +60,70 @@
            options.classList.add("active");
          }
        });
-     });</script>
-    
+     });
+     </script>
+
+<!-- When User click the filter option it will change to another color-->
+     <script>
+      const nameBtn = document.getElementById('name-option');
+      const skillsBtn = document.getElementById('Skills-option');
+      const experienceBtn = document.getElementById('Experience-option');
+
+let selectedBtn = null;
+
+nameBtn.addEventListener('click', function() {
+  if (selectedBtn === nameBtn) {
+    nameBtn.style.backgroundColor = '';
+    selectedBtn = null;
+  } else {
+    if (selectedBtn) {
+      selectedBtn.style.backgroundColor = '';
+    }
+    nameBtn.style.backgroundColor = 'Coral';
+    selectedBtn = nameBtn;
+  }
+});
+
+skillsBtn.addEventListener('click', function() {
+  if (selectedBtn === skillsBtn) {
+    skillsBtn.style.backgroundColor = '';
+    selectedBtn = null;
+  } else {
+    if (selectedBtn) {
+      selectedBtn.style.backgroundColor = '';
+    }
+    skillsBtn.style.backgroundColor = 'Crimson';
+    selectedBtn = skillsBtn;
+  }
+});
+
+experienceBtn.addEventListener('click', function() {
+  if (selectedBtn === experienceBtn) {
+    experienceBtn.style.backgroundColor = '';
+    selectedBtn = null;
+  } else {
+    if (selectedBtn) {
+      selectedBtn.style.backgroundColor = '';
+    }
+    experienceBtn.style.backgroundColor = 'DarkCyan';
+    selectedBtn = experienceBtn;
+  }
+});
+
+nameBtn.addEventListener('blur', function() {
+  nameBtn.style.backgroundColor = '';
+});
+
+skillsBtn.addEventListener('blur', function() {
+  skillsBtn.style.backgroundColor = '';
+});
+
+experienceBtn.addEventListener('blur', function() {
+  experienceBtn.style.backgroundColor = '';
+});
+
+      </script>
+
     </div>
     <button class="search-button">Search</button>
 
