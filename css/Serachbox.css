@@ -96,28 +96,10 @@
   display: none;
 }
 
-
-.search-options ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.search-options li {
-  margin: 0;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.search-options li.selected::after {
-  content: '\2713';
-  margin-left: 5px;
-}
-
 /*/Click serach/*/
 .search-button {
-  background-color: rgb(28, 181, 232);
-  color: rgb(9, 9, 9);
+  background-color: rgb(16, 171, 5);
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 5px;
   margin-left: 10px;
@@ -158,6 +140,10 @@
 
 .column a:hover {
   text-decoration: underline;
+}
+
+.rounded img {
+  border-radius: 15px;
 }
 
 
