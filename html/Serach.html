@@ -40,25 +40,13 @@
     <input type="text" class="search-input">
     <button class="search-by">Search by <span class="arrow">&#9660;</span></button>
     <div class="search-options">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
       <ul>
-        <li id="name-option">Name</li>
-        <li id="Skills-option">Skills</li>
-        <li id="Experience-option">Experience</li>
+        <button type="button" class="btn btn-danger" id="name-option">Name</button>
+        <button type="button" class="btn btn-warning"id="Skills-option">Skills</button>
+        <button type="button" class="btn btn-success" id="Experience-option">Experience</button>
       </ul>
-      <script> 
-      
-      function handleClickOutside(event) {
-        const searchContainer = document.getElementById("search-container");
-        if (searchContainer && !searchContainer.contains(event.target)) {
-          const options = document.querySelector(".search-by.active + .search-options");
-          if (options) {
-            options.classList.remove("active");
-          }
-        }
-      }
-      
-      document.addEventListener("click", handleClickOutside);
-      </script>
+      </div>
     <script> const searchByButtons = document.querySelectorAll(".search-by");
      searchByButtons.forEach(function(button) {
        button.addEventListener("click", function() {
@@ -142,7 +130,7 @@ event.target.classList.add('selected');
 
   <article class="column">
     <div class="rounded">
-      <img src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"  width="50px">
+      <img src="https://drive.google.com/uc?export=view&id=1366kzRVwQ3doo3OEjeHroJ0hGuXCN-Rt"  width="50px">
       </div>
        <h3>Suwiboon Chamniwikaikangwan</h3>
        <section>Suwiboon Chamniwikaikangwan (Pond) a sophomore at the Faculty of ICT, Mahidol University. He is an expert in graphic design and a passionate software engineer. </section>
