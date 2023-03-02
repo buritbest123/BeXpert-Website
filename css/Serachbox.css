@@ -30,14 +30,14 @@
 }
 
 .search-input {
-  width: 60%;
+  width: 40%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid gray;
   margin-right: 10px;
 }
 
-/* When the user clicks 'Search by' it will have the option to help user find easily */
+/* When the user clicks 'Filter By' it will have the option to help user find easily */
 .search-by {
   background-color: lightgray;
   padding: 10px 20px;

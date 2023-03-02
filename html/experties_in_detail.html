@@ -117,25 +117,35 @@
                 <label class="form-label" for="text">My Education</label>
                 
                     <!-- buttons for education -->
-                    <p>
-                        <button class="btn btn-primary collapsed" data-bs-toggle="collapse" data-bs-target="#collapseUniversity" aria-expanded="false" aria-controls="collapseUniversity">
-                          University
-                        </button>
-                        <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSchool" aria-expanded="false" aria-controls="collapseSchool">
-                          High School
-                        </button>
-                    </p>
-                    <!-- details for education -->
-                    <div class="collapse" id="collapseUniversity">
-                        <div class="card card-body">
-                            2021 - 2025
+                    <div class="accordion accordion-flush" id="accordionFlushEducation">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingUniversityEducation">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUniversityEducation" aria-expanded="false" aria-controls="flush-collapseUniversityEducation">
+                                    University
+                                </button>
+                            </h2>
+                            <div id="flush-collapseUniversityEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingUniversityEducation" data-bs-parent="#accordionFlushEducation">
+                                <div class="accordion-body">
+                                    <!-- edit -->
+                                    2021 - 2025
+                                </div>
+                            </div>
                         </div>
-                    </div>  
-                    <div class="collapse" id="collapseSchool">
-                        <div class="card card-body">
-                            2018 - 2020
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSchoolEducation">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSchoolEducation" aria-expanded="false" aria-controls="flush-collapseSchoolEducation">
+                                    High School
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSchoolEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingSchoolEducation" data-bs-parent="#accordionFlushEducation">
+                                <div class="accordion-body">
+                                    <!-- edit -->
+                                    2018 - 2020
+                                </div>
+                            </div>
                         </div>
                     </div>
+                       
 
                 <!-- Skills -->
                 <br><br>
@@ -187,6 +197,7 @@
                 <!-- to product management -->
                 <br><br>
                 <a href="product_management.html"><button type="submit" class="btn btn-primary">Edit</button></a>
+                <a href="javascript:history.back()"><button type="reset" class="btn btn-primary">Back</button></a>
                 
             </div>
         </div>
