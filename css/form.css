@@ -51,16 +51,22 @@ nav img {
     .FillIn {
         width: 360px;
         height: min-content;
-        padding: 20px;
+        margin-top: 8%;
         border-radius: 12px;
         background: #ffffff;
         border: 1px solid #000000;
+        padding: 2%;
     }
     /* Submit button styles */
     .FillIn form input[type="submit"] {
         font-size: 20px;
         margin-top: 20px;
     } 
+
+    .text-center {
+        margin-top: 0%;
+        margin-bottom:-20px;
+    }
 }
 
 /* CSS rules for screens 800px or less */
