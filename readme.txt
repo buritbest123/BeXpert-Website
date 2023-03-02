@@ -30,4 +30,5 @@ About Us:
 Shows you the overview of what we do and also show the team members who developed the project and websites.
 
 Login & Register:
-    -Login with your email and password you creted
+    - Login with your email and password you creted.
+    - Register by filling the required box
