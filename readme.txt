@@ -2,14 +2,14 @@ BeXpert readme
 
 - Recommended browser to open is Google Chrome.
 - Start with Homepage which is index.html
-- To go back to the main page clivk the logo on the navigation bar.
+- To go back to the main page click the logo on the navigation bar.
 
 
 HOMEPAGE:
 Homepage can go to Search,About Us, How to, Login and Register and will have some information about the website.
 
 Search Page: 
-The search will show you all profile and you can choose to search by name, skills or experience you can click learn more to view the full profile.
+The search will show you all product and you can choose to search by name, skills or experience you can click learn more to view the full profile.
 
 
 How to :
@@ -30,5 +30,5 @@ About Us:
 Shows you the overview of what we do and also show the team members who developed the project and websites.
 
 Login & Register:
-    - Login with your email and password you creted.
+    - Login with your email and password you creted.(for admin: Email: admin@gmail.com Password: admin123)
     - Register by filling the required box

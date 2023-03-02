@@ -56,6 +56,7 @@ nav img {
         background: #ffffff;
         border: 1px solid #000000;
         padding: 2%;
+        zoom:0.95;
     }
     /* Submit button styles */
     .FillIn form input[type="submit"] {
@@ -72,9 +73,7 @@ nav img {
 /* CSS rules for screens 800px or less */
 @media screen and (max-width: 800px) {
     /* Center the form horizontally */
-    .FillIn {
-    margin: 0 auto;
-    }
+
     
     /* Navigation bar styles */
     nav {
@@ -89,13 +88,15 @@ nav img {
     }
     /* Form styles */
     .FillIn {
-    width: 360px;
+    width: 100%;
     height: min-content;
     margin-top: 50px;
     padding: 20px;
     border-radius: 12px;
     background: #ffffff;
     border: 1px solid #000000;
+    margin: 0 auto;
+    zoom: 1.8;
     }
 }
 
