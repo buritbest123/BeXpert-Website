@@ -1,5 +1,5 @@
 
-/*/ Picture of website/*/
+/* Picture of website */
 .logo {
   text-align: center;
   margin-top: 50px;
@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 
-/*/ Do the Search box /*/
+/* Do the Search box */
 .search-container {
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
   margin-right: 10px;
 }
 
-/*/ When the user cilck 'Search by' it will have the option to help user find easliy/*/
+/* When the user clicks 'Search by' it will have the option to help user find easily */
 .search-by {
   background-color: lightgray;
   padding: 10px 20px;
@@ -45,8 +45,7 @@
   cursor: pointer;
 }
 
-
-/*/ Drop down /*/
+/* Drop down */
 .search-container .search-options {
   display: none;
   position: absolute;
@@ -79,7 +78,6 @@
   z-index: 1;
   padding: 5px;
   margin-top: 5px;
-  
 }
 
 .search-by.active + .search-options,
@@ -91,7 +89,7 @@
   display: none;
 }
 
-/*/Click serach/*/
+/* Click search */
 .search-button {
   background-color: rgb(16, 171, 5);
   color: rgb(0, 0, 0);
@@ -101,7 +99,7 @@
   cursor: pointer;
 }
 
-/*/ Profile recommand /*/
+/* Profile recommend */
 .recommendations-container {
   display: flex;
   flex-direction: column;
@@ -127,7 +125,7 @@
   margin: 10px 0;
 }
 
-/*/ When user cilck Learn More /*/
+/* When user clicks Learn More */
 .column a {
   color: #007bff;
   text-decoration: none;
@@ -140,8 +138,6 @@
 .rounded img {
   border-radius: 15px;
 }
-
-
 
 /*/ Animation Fade in When user cilck in/**/
 
