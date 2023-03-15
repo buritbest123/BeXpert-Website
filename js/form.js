@@ -1,10 +1,12 @@
 // This JS defines a function that redirects to the login page, 
-// adds event listeners to validate the username and password fields, and handles form submission.
+// Adds event listeners to validate the username and password fields, and handles form submission.
 function redirectToLogin() {
     window.location.href = "../html/login.html";
   }
   
-  document.addEventListener("DOMContentLoaded", function() {
+// Wait for the DOM to load before executing the code inside
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the form and input elements
     const registerForm = document.querySelector("#register-form");
     const usernameInput = document.querySelector("#username");
     const passwordInput = document.querySelector("#password");
@@ -12,23 +14,31 @@ function redirectToLogin() {
     
     // Define the validation functions
     function validateUsername() {
+      // Get the value of the username input
       const usernameValue = usernameInput.value;
+      // Define a regular expression that only allows letters, numbers, and underscores
       const usernameRegex = /^[a-zA-Z0-9_]+$/;
+      // If the input doesn't match the regex, set a custom error message
       if (!usernameRegex.test(usernameValue)) {
         usernameInput.setCustomValidity("Username can only contain letters, numbers, and underscores.");
       } else {
+        // Otherwise, clear any existing error message
         usernameInput.setCustomValidity("");
-      }
+        }
     }
     
     function validatePassword() {
+      // Get the value of the password input
       const passwordValue = passwordInput.value;
+      // Define a regular expression that requires at least 8 characters, one uppercase letter, one lowercase letter, and one number
       const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+      // If the input doesn't match the regex, set a custom error message
       if (!passwordRegex.test(passwordValue)) {
         passwordInput.setCustomValidity("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.");
       } else {
+        // Otherwise, clear any existing error message
         passwordInput.setCustomValidity("");
-      }
+        }
     }
     
     // Add event listeners to perform validation as the user types or blurs from the fields
@@ -47,25 +57,27 @@ function redirectToLogin() {
       
       if (registerForm.checkValidity()) {
         // TODO: Submit form data to server using AJAX or Fetch (wait for study)
-        // If successful, redirect to login page
-
+        // If successful, redirect to login page after 2 seconds
         successMessage.classList.remove("d-none");
         setTimeout(redirectToLogin, 2000);
       }
-      
-      registerForm.classList.add("was-validated");
+        // Add a class to the form to indicate that it has been validated
+        registerForm.classList.add("was-validated");
     });
   });
   
   function auth() {
+    // Get the values of the email and password inputs
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
+    // If the email and password are correct, redirect to the user management page and show an alert
     if (email == "admin@gmail.com" && password == "admin123") {
       window.location.assign("../html/user_management.html")
       alert("Login Successfully");
     } 
-    else {
-      alert("Invalid Information");
-      return;
-    }
+    // Otherwise, show an alert indicating that the information is invalid and return to the login page
+      else {
+        alert("Invalid Information");
+        return;
+      }
 }
