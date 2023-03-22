@@ -39,4 +39,4 @@ Shows you an overview of what we do and also shows the team members who develope
 	- Admin: Email: admin@gmail.com Password: admin123
 
 **Register:**
-    - Register by filling in the required box.
+- Register by filling in the required box.
