@@ -8,7 +8,7 @@ CREATE TABLE `admin_info`(
 `username` VARCHAR (50) NOT NULL, -- Username
 `fname` VARCHAR (100) NOT NULL, 	-- first name
 `lname` VARCHAR (100) NOT NULL,	-- last name
-`email` VARCHAR (100) NOT NULL,	-- email address will be unique
+`email` VARCHAR (100) NOT NULL PRIMARY KEY,	-- email address will be unique
 `phone` VARCHAR (200) NOT NULL,	-- phone number
 `Address` VARCHAR (200) NOT NULL,	-- address
 `bdate` DATE NOT NULL,			-- birth date
@@ -27,7 +27,7 @@ INSERT INTO `admin_info` (`username`, `fname`, `lname`, `email`, `phone`, `addre
 
 -- Admistrator Login information
 CREATE TABlE login_info(
-email VARCHAR (100) NOT NULL UNIQUE,	-- email
+email VARCHAR (100) NOT NULL PRIMARY KEY,	-- email
 psw VARCHAR (255) NOT NULL		-- password
 );
 
@@ -53,7 +53,8 @@ email VARCHAR (100) NOT NULL,
 linkedin VARCHAR (100) NOT NULL,
 mobile_num VARCHAR (200) NOT NULL,
 pic_link VARCHAR (500),
-bg_link VARCHAR (500)
+bg_link VARCHAR (500),
+CONSTRAINT FullName PRIMARY KEY (fname, lname)
 );
 
 -- Insert expertise data into database
