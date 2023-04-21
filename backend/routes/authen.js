@@ -2,6 +2,29 @@ const app = require("express").Router();
 const moment = require("moment");
 const { connection } = require("../db");
 const isLogin = require("../isLogin");
+const passport = require("../passport");
+
+app.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+app.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    successRedirect: "/success",
+    failureRedirect: "/login",
+    failureFlash: true,
+  })
+);
+
+app.get("/me", (req, res, next) => {
+  if (req.user) {
+    res.status(200).json({ status: true, datas: req.user });
+  } else {
+    res.redirect("/");
+  }
+});
 
 app.post("/login", async (req, res, next) => {
   try {
@@ -61,7 +84,7 @@ app.post("/register", async (req, res, next) => {
   }
 });
 
-app.get("/me", isLogin, async (req, res, next) => {
+app.get("/profile", isLogin, async (req, res, next) => {
   try {
     res.status(200).json({ success: true, datas: req.session.user });
   } catch (error) {
