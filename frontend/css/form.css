@@ -27,7 +27,7 @@ nav img {
 /* CSS rules for screens wider than 800px */
 @media screen and (min-width: 801px) {
     nav {
-        background-color: #242B4B;
+        background-color: #255C8C;
         padding: 5px;
         overflow: hidden;
         display: flex;
@@ -79,7 +79,7 @@ nav img {
     /* Navigation bar styles */
     nav {
         margin-left: 0.39px;
-        background-color: #242B4B;
+        background-color: #255C8C;
         padding: 5px;
         overflow: hidden;
         display: flex;
