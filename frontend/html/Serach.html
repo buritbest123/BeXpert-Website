@@ -36,7 +36,7 @@
   </div>
 
   <!-- Search box and Filter-->
-  <div class="search-container">
+  <!--<div class="search-container">
     <input type="text" class="search-input">
     <button class="search-by">Filter by <span class="arrow">&#9660;</span></button>
     <div class="search-options">
@@ -46,10 +46,23 @@
         <button type="button" class="btn btn btn-primary"id="Skills-option">Skills</button>
         <button type="button" class="btn btn btn-primary" id="Experience-option">Experience</button>
       </ul>
-      </div>
+      </div> -->
+      <div class="row mb-3">
+  <div class="col">
+    <form class="d-flex" action="/form-submit" method="POST">
+      <select class="form-select me-2" id="search-option" name="search_choice" required>
+        <option selected disabled>Filter by</option>
+        <option value="name">Name</option>
+        <option value="skills">Skills</option>
+        <option value="experience">Experience</option>
+      </select>
+      <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search" name="search_value" required>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+</div>
 
       
-
       <!-- Make button still here don't disappear-->
     <script> const searchByButtons = document.querySelectorAll(".search-by");
      searchByButtons.forEach(function(button) {
@@ -127,8 +140,6 @@ experienceBtn.addEventListener('blur', function() {
       </script>
 
     </div>
-    <button class="search-button">Search</button>
-
  <!-- For the filter option (Serach by) -->   
   <script>  
  // Get all the search options 
