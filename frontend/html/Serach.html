@@ -48,19 +48,21 @@
       </ul>
       </div> -->
       <div class="row mb-3">
-  <div class="col">
-    <form class="d-flex" action="/form-submit" method="POST">
-      <select class="form-select me-2" id="search-option" name="search_choice" required>
-        <option selected disabled>Filter by</option>
-        <option value="name">Name</option>
-        <option value="skills">Skills</option>
-        <option value="experience">Experience</option>
-      </select>
-      <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search" name="search_value" required>
-      <button class="btn btn-primary" type="submit">Search</button>
-    </form>
-  </div>
-</div>
+        <div class="col d-flex justify-content-center">
+          <form class="d-flex" action="/form-submit" method="POST">
+            <select class="form-select me-2" id="search-option" name="search_choice" required>
+              <option selected disabled>Filter by</option>
+              <option value="name">Name</option>
+              <option value="skills">Skills</option>
+              <option value="experience">Experience</option>
+            </select>
+            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search" name="search_value" required>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      
+      
 
       
       <!-- Make button still here don't disappear-->
