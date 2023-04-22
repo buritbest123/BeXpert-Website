@@ -10,89 +10,10 @@
   margin: 0 auto;
 }
 
-/* Do the Search box */
-.search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 50px auto;
-  width: 60%;
-  position: relative;
-}
-
-.container {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.search-container {
-  position: relative;
-}
-
-.search-input {
-  width: 40%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  margin-right: 10px;
-}
-
-/* When the user clicks 'Filter By' it will have the option to help user find easily */
-.search-by {
-  background-color: lightgray;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Drop down */
-.search-container .search-options {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  padding-left: 355px;
-  z-index: 1;
-}
-
-.search-container:hover .search-options {
-  display: block;
-}
-
-.search-by .arrow {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease-in-out;
-}
-
-.search-container:hover .search-by .arrow {
-  transform: rotate(0deg);
-}
-
-.search-options {
-  top: 100%;
-  left: 0;
-  right: 100;
-  z-index: 1;
-  padding: 5px;
-  margin-top: 5px;
-}
-
-.search-by.active + .search-options,
-.search-options.active {
-  display: block;
-}
-
-.search-by.active + .search-options {
-  display: none;
-}
 
 /* Click search */
 .search-button {
+  width: 25%;
   background-color: rgb(16, 171, 5);
   color: rgb(0, 0, 0);
   padding: 10px 20px;
@@ -100,6 +21,9 @@
   margin-left: 10px;
   cursor: pointer;
 }
+
+
+
 
 /* Profile recommend */
 .recommendations-container {
