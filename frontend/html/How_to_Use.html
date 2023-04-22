@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page title -->
+        <title>BeXpert: Manual</title>
+        <!-- link to css -->
+        <link rel="stylesheet" type="text/css" href="../css/howto.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+            });
+            $(function(){
+                 $('#nav_footer').load('../header_footer/footer.html');
+             });
+        </script>
+    </head>
+
+    <body>
+    <!-- for nav -->
+    <nav>
+        <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+        <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
+    </nav>
+        <br>
+
+        <!-- To create a header in order to put the topic -->
+        <header>
+            <h1>
+                How to Use BeXpert
+            </h1>
+        </header>
+        <br>
+
+        <!-- How to use for company where it's order in bullet points-->
+        <article class="container">
+            <article class="column">
+                <h4 id =company>For Company</h4>
+                <!-- bullet point for how to -->
+                    <ul id="Step">
+                        <li>Login or Register to Bexpert</li>
+                        <li>Search for the position your company wants (search by Name, Skills, Experience)</li>
+                        <li>Choose the right person for your organization by going to their profile for more information and CV/Resume</li>
+                        <li>Contact them using the contact provided</li>
+                    </ul>
+                    <!-- Add how to use picture -->
+                    <div class="Companyhow">
+                        <img id=comhow src="https://drive.google.com/uc?export=view&id=1nXNt2zZUjedx9bMi2LjF1D8RGAd9YlkQ"  alt="howto">
+                      </div>
+            </article>
+            
+            <article class="column">
+                <h4 id="user">For User</h4>
+                <!-- bullet point for how to -->
+                    <ul id="Step">
+                        <li>Login or Register to Bexpert</li>
+                        <li>Create a portfolio by adding your personal information </li>
+                        <li>Add Bio Skills, Experience, Education, Skills, Conatct and CV/Resume (Add your interest position in the BIO) </li>
+                        <li>Wait for the Company to contact you via given contact </li>
+                    </ul>
+                 <!-- Add how to use picture -->
+                <div class="Company how">
+                    <img id=userhow src="https://drive.google.com/uc?export=view&id=1ec38J4QEA77Tm_Lxb6FJ_n9H3yLhHVab" width="650px" alt="howto">
+                  </div>
+            </article>
+        </article>
+        <br>
+
+    <!-- footer -->
+    <footer id="nav_footer" style="width: 100%;"></footer>
+    </body>
+</html>
