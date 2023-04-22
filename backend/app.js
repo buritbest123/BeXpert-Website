@@ -45,4 +45,48 @@ app.get("/success", (req, res, next) => {
 app.use("/auth", route_authen);
 app.use("/admin", route_admin);
 app.use("/expert", route_expert);
+
+const mysql = require("mysql2");
+const db = mysql.createConnection({
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE,
+});
+
+//DB on connect
+db.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected DB: " + process.env.MYSQL_DATABASE);
+});
+
+app.post("/login-auth", (request, response) => {
+  const { email, password } = request.body;
+
+  console.log(email);
+  db.query(
+    `SELECT * FROM LOGIN_INFO Where email LIKE '%${email}%'`,
+    (error, results, fields) => {
+      console.log(results);
+      if (error) {
+        console.log(error);
+        response
+          .status(500)
+          .json({ Message: "An error occurred while fetching user data." });
+      } else if (results.length === 0) {
+        response.status(404).json({ Message: "User does not exist." });
+      } else if (password === results[0].psw) {
+        request.session.loggedIn = true;
+        console.log(request.session.loggedIn); // add this line to check if the flag is being set correctly
+        request.session.user = email;
+        request.session.save(); // Add this line to save the session
+        response.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        response.status(200).json({ Message: "Welcome!" });
+      } else {
+        response.status(500).json({ Message: "Incorrect password." });
+      }
+    }
+  );
+});
+
 app.listen(PORT, () => console.log(`Server on ${PORT} ⚡`));

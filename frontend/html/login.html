@@ -29,12 +29,12 @@
     <!-- Login form -->
     <div class="FillIn">
         <h1 class="text-center"><img src=../picture/Logo.png width="80px"></h1>
-        <form class="container forms">
+        <form action="/submit-login" method="POST">
 
         <!-- Input field for email address -->
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
-                <input class="form-control" type="email" id="email" required>
+                <input class="form-control" type="email" id="email" name="email" required >
                 <div class="valid-feedback">Email field is valid!</div>
                 <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
@@ -42,7 +42,7 @@
         <!-- Input field for Password -->
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password" id="password" required>
+                <input class="form-control" type="password" id="password" name="password" required>
                 <div class="valid-feedback">Password field is valid!</div>
                 <div class="invalid-feedback">Please enter a password.</div>                
             </div>
