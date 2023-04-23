@@ -56,7 +56,7 @@ routers.post("/submit-login", async (req, res) => {
     .then((response) => {
       if (response.status === 200) {
         // const data = result.data;
-        console.log("hello world");
+        console.log("Hello admin!");
         res.redirect("/user_management");
       }
     })
@@ -71,5 +71,5 @@ app.get("/user_management", (request, response) => {
 
 app.listen(3030, () => {
   // Start the server and listen on port 3030
-  console.log("Server is litening on port 3030");
+  console.log("Server is litening on port 3030 ⚡");
 });
