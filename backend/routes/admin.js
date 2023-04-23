@@ -141,3 +141,51 @@ app.post("/add-admin", async (req, res, next) => {
   }
 });
 
+
+// update the people (admin) //
+app.put("/:id", async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const body = req.body;
+    const sql = "SELECT * FROM admin_info where id = ? limit 1";
+    const [rows] = await connection.promise().query(sql, [id]);
+    if (rows.length > 0) {
+      const updateAdmin = `UPDATE admin_info SET username = ?,fname = ?,lname = ?,address = ?,phone = ?,bdate = ? WHERE id = ?;`;
+      await connection
+        .promise()
+        .query(updateAdmin, [
+          body.username,
+          body.firstName,
+          body.lastName,
+          body.address,
+          body.phone,
+          moment(body.BDAge).format("YYYY-MM-DD"),
+          id,
+        ]);
+      res.status(200).json({ success: true });
+    } else {
+      res.status(403).json({ success: false, message: "Not found admin." });
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+
+//Delete //
+
+fetch('/admin/<id>', {
+  method: 'DELETE'
+})
+.then(response => {
+  if (response.ok) {
+    // handle success response
+    console.log('Admin deleted successfully');
+  } else {
+    // handle error response
+    console.error('Failed to delete admin');
+  }
+})
+.catch(error => {
+  console.error(error);
+});
