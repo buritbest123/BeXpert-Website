@@ -81,7 +81,7 @@ app.post("/login-auth", (request, response) => {
         request.session.user = email;
         request.session.save(); // Add this line to save the session
         response.header("Access-Control-Allow-Origin", "http://localhost:3000");
-        response.status(200).json({ Message: "Welcome!" });
+        response.status(200).json({ Message: "Welcome Admin!" });
       } else {
         response.status(500).json({ Message: "Incorrect password." });
       }
@@ -89,4 +89,4 @@ app.post("/login-auth", (request, response) => {
   );
 });
 
-app.listen(PORT, () => console.log(`Server on ${PORT} ⚡`));
+app.listen(PORT, () => console.log(`Server is litening on ${PORT} ⚡`));
