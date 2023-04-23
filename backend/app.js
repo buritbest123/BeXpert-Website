@@ -94,6 +94,7 @@ app.post("/login-auth", (request, response) => {
 app.get("/expert", (request, response) => {
   const { filter, search_value } = request.query;
 
+  console.log("hello")
   let sql;
   let query;
   if (filter === "name") {
@@ -138,10 +139,9 @@ app.get("/expert", (request, response) => {
 
   let sql;
   let query;
-  if (filter === "name") {
+  if (filter === "bio" || filter === "skills" || filter === "name") {
     sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR 
-           lname LIKE ?`;
+           fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
     query = `%${search_value}%`;
   } else if (filter === "skills") {
     sql = `SELECT * FROM expert WHERE 
@@ -151,9 +151,10 @@ app.get("/expert", (request, response) => {
     sql = `SELECT * FROM expert WHERE 
            about LIKE ?`;
     query = `%${search_value}%`;
-  } else if (filter === "bio" || filter === "skills" || filter === "name") {
+  } else if (filter === "name") {
     sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
+           fname LIKE ? OR 
+           lname LIKE ?`;
     query = `%${search_value}%`;
   } else {
     // Invalid search choice
