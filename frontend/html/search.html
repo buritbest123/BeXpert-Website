@@ -1,162 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-  <!-- CSS. LINK-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/Serachbox.css"> 
-    <link rel="stylesheet" href="HomePage.html">
+  <head>
+    <!-- CSS. LINK-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/Serachbox.css" />
+    <link rel="stylesheet" href="HomePage.html" />
     <title>Search The Expert!</title>
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>
-       $(function(){
-       $('#nav_header').load('../header_footer/nav.html');
-       });
-       $(function(){
-            $('#nav_footer').load('../header_footer/footer.html');
-        });
-   </script>
-</head>
-
-
-
-<body>
-  <!-- for nav -->
-  <nav>
-    <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
-    <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
-  </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#nav_header").load("../header_footer/nav.html");
+      });
+      $(function () {
+        $("#nav_footer").load("../header_footer/footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- for nav -->
+    <nav>
+      <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+      <div id="nav_header" style="width: 100%; height: 40px"></div>
+    </nav>
 
     <!-- the Search page part-->
     <section class="brandsection">
       <div>
-         <img src="../picture/BEX_logo.png" class="logo" height="200px" width="200px">
+        <img
+          src="../picture/BEX_logo.png"
+          class="logo"
+          height="200px"
+          width="200px"
+        />
       </div>
     </section>
 
-      <div class="row mb-3">
-        <div class="col d-flex justify-content-center">
-          <form class="d-flex" action="/expert" method="get">
-            <select class="form-select me-2" id="search-option" name="search_choice" required>
-              <option selected disabled>Filter by</option>
-              <option value="name">Name</option>
-              <option value="skills">Skills</option>
-              <option value="bio">Bio</option>
-            </select>
-            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search" name="filter" required>
-            <button class="btn btn-primary me-2">Search</button>
-            <button id="add-btn" class="btn btn-secondary" type="button">+</button>
-           <!---  <button class="id btn-secondary" type="button">+</button> -->
-          </form>
+    <div class="row mb-3">
+      <div class="col d-flex justify-content-center">
+        <div class="d-flex">
+          <select
+            class="form-select me-2"
+            id="search-option"
+            name="search_choice"
+            required
+          >
+            <option selected disabled value="">Filter by</option>
+            <option value="name">Name</option>
+            <option value="skills">Skills</option>
+            <option value="bio">Bio</option>
+          </select>
+          <input
+            type="text"
+            class="form-control me-2"
+            placeholder="Search"
+            aria-label="Search"
+            name="filter"
+            id="filter"
+          />
+          <button class="btn btn-primary me-2" type="button" onclick="search()">
+            Search
+          </button>
+          <button
+            id="add-btn"
+            class="btn btn-secondary"
+            type="button"
+            onclick="addexpert()"
+          >
+            +
+          </button>
+          <!---  <button class="id btn-secondary" type="button">+</button> -->
         </div>
       </div>
-      
-      <!-- The Recommand Profile -->
-      <div class="recommendations-container" id="expert-wrapper">
-      <script type="text/javascript" src="../js/expert.js"></script>
-
-      
-      <!-- Make button still here don't disappear-->
-    <script> const searchByButtons = document.querySelectorAll(".search-by");
-     searchByButtons.forEach(function(button) {
-       button.addEventListener("click", function() {
-         const options = this.nextElementSibling;
-         if (options.classList.contains("active")) {
-           options.classList.remove("active");
-         } else {
-           options.classList.add("active");
-         }
-       });
-     });
-     </script>
-
-
-<!-- When User click the filter option it will change to another color-->
-     <script>
-      const nameBtn = document.getElementById('name-option');
-      const skillsBtn = document.getElementById('Skills-option');
-      const bioBtn = document.getElementById('bio-option');
-
-let selectedBtn = null;
-
-nameBtn.addEventListener('click', function() {
-  if (selectedBtn === nameBtn) {
-    nameBtn.style.backgroundColor = '';
-    selectedBtn = null;
-  } else {
-    if (selectedBtn) {
-      selectedBtn.style.backgroundColor = '';
-    }
-    nameBtn.style.backgroundColor = 'Coral';
-    selectedBtn = nameBtn;
-  }
-});
-
-skillsBtn.addEventListener('click', function() {
-  if (selectedBtn === skillsBtn) {
-    skillsBtn.style.backgroundColor = '';
-    selectedBtn = null;
-  } else {
-    if (selectedBtn) {
-      selectedBtn.style.backgroundColor = '';
-    }
-    skillsBtn.style.backgroundColor = 'Crimson';
-    selectedBtn = skillsBtn;
-  }
-});
-
-bioBtn.addEventListener('click', function() {
-  if (selectedBtn === bioBtn) {
-    bioBtn.style.backgroundColor = '';
-    selectedBtn = null;
-  } else {
-    if (selectedBtn) {
-      selectedBtn.style.backgroundColor = '';
-    }
-    bioBtn.style.backgroundColor = 'DarkCyan';
-    selectedBtn = bioBtn;
-  }
-});
-
-nameBtn.addEventListener('blur', function() {
-  nameBtn.style.backgroundColor = '';
-});
-
-skillsBtn.addEventListener('blur', function() {
-  skillsBtn.style.backgroundColor = '';
-});
-
-bioBtn.addEventListener('blur', function() {
-  bioBtn.style.backgroundColor = '';
-});
-
-      </script>
-
     </div>
- <!-- For the filter option (Serach by) -->   
-  <script>  
- // Get all the search options 
-const searchOptions = document.querySelectorAll('.search-options li');
-// Add click event listener to each search option
-searchOptions.forEach((option) => {
-option.addEventListener('click', (event) => {
-// Remove the selected class from all options
-searchOptions.forEach((option) => {
-option.classList.remove('selected');
-    });
-// Add the selected class to the clicked option
-event.target.classList.add('selected');
-  });
-})
-</script>
-</div>
+    <!-- The Recommand Profile -->
+    <div class="recommendations-container" id="expert-wrapper"></div>
 
-
-</body>
-<!-- footer -->
-<footer id="nav_footer" style="width: 100%;"></footer>
-
+    <div
+      class="modal fade"
+      id="conformDeleteModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Delete?</h5>
+          </div>
+          <div class="modal-body">
+            <p>Comfirm Delete Name: <span id="deleteName"></span> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal()"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="deleteExpert()"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- footer -->
+  <footer id="nav_footer" style="width: 100%"></footer>
+  <script type="text/javascript" src="../js/expert.js"></script>
 </html>

@@ -48,7 +48,7 @@
     </nav>
 
     <!-- background band -->
-    <div class="bannerimage" alt="Responsive image">
+    <div class="bannerimage" id="bannerimage" alt="Responsive image">
       <!-- product profile -->
       <img
         class="profile-picture"
@@ -59,11 +59,11 @@
     </div>
 
     <div class="management">
-      <h2>Added Experty Information</h2>
+      <h2>Edit Experty Information</h2>
       <br />
 
       <!-- for product management -->
-      <form id="form_id" onsubmit="postData()">
+      <form id="form_id">
         <div class="login">
           <div class="form-group">
             <!-- Firstname -->
@@ -120,7 +120,9 @@
               id="about"
               name="about"
               required
-            ></textarea>
+            >
+Test</textarea
+            >
 
             <!-- Experience -->
             <br /><br />
@@ -128,8 +130,8 @@
             <input
               class="form-control"
               type="text"
-              id="lecense"
-              name="lecense"
+              id="license"
+              name="license"
             />
             <!-- Education -->
             <br /><br />
@@ -167,7 +169,9 @@
                       id="edu_uni"
                       name="edu_uni"
                       required
-                    ></textarea>
+                    >
+Test</textarea
+                    >
                   </div>
                 </div>
               </div>
@@ -198,7 +202,9 @@
                       id="edu_highschool"
                       name="edu_highschool"
                       required
-                    ></textarea>
+                    >
+Test</textarea
+                    >
                   </div>
                 </div>
               </div>
@@ -377,8 +383,8 @@
 
             <!-- save and reset -->
             <br /><br />
-            <button type="button" class="btn btn-success" onclick="postData()">
-              Save
+            <button type="button" class="btn btn-warning" onclick="postData()">
+              Submit
             </button>
             <button type="reset" class="btn btn-primary" onclick="cancel()">
               Cancel
@@ -390,6 +396,6 @@
 
     <!-- footer -->
     <footer id="nav_footer" style="width: 100%"></footer>
-    <script src="../js/profile-management.js"></script>
+    <script src="../js/eprofile-management-edit.js"></script>
   </body>
 </html>

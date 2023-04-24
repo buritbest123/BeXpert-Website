@@ -4,11 +4,13 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const path = require("path");
 const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
 const passport = require("./passport");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -66,7 +68,7 @@ app.post("/login-auth", (request, response) => {
 
   console.log(email);
   db.query(
-    `SELECT * FROM LOGIN_INFO Where email LIKE '%${email}%'`,
+    `SELECT * FROM login_info Where email LIKE '%${email}%'`,
     (error, results, fields) => {
       console.log(results);
       if (error) {
@@ -94,7 +96,7 @@ app.post("/login-auth", (request, response) => {
 app.get("/expert", (request, response) => {
   const { filter, search_value } = request.query;
 
-  console.log("hello")
+  console.log("hello");
   let sql;
   let query;
   if (filter === "name") {
@@ -122,8 +124,8 @@ app.get("/expert", (request, response) => {
 
   connection.query(sql, [query, query], (err, results, fields) => {
     if (err) {
-      console.error('Error querying database: ' + err.stack);
-      response.status(500).send('Error querying database');
+      console.error("Error querying database: " + err.stack);
+      response.status(500).send("Error querying database");
       return;
     }
 
@@ -131,7 +133,6 @@ app.get("/expert", (request, response) => {
     response.json(results);
   });
 });
-
 
 //Search
 app.get("/expert", (request, response) => {
@@ -164,8 +165,8 @@ app.get("/expert", (request, response) => {
 
   connection.query(sql, [query, query], (err, results, fields) => {
     if (err) {
-      console.error('Error querying database: ' + err.stack);
-      response.status(500).send('Error querying database');
+      console.error("Error querying database: " + err.stack);
+      response.status(500).send("Error querying database");
       return;
     }
 
@@ -173,6 +174,5 @@ app.get("/expert", (request, response) => {
     response.json(results);
   });
 });
-
 
 app.listen(PORT, () => console.log(`Server is litening on ${PORT} ⚡`));

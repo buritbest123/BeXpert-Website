@@ -23,8 +23,7 @@ app.get("/", async (req, res, next) => {
 app.post("/", async (req, res, next) => {
   try {
     const body = req.body;
-    const sql =
-      "SELECT username,fname,lname,email,phone,Address,bdate,role FROM admin_info where email = ? limit 1";
+    const sql = "SELECT * FROM admin_info where email = ? limit 1";
     const [user] = await connection.promise().query(sql, [body.email]);
 
     if (user.length > 0) {
@@ -104,15 +103,19 @@ app.delete("/:id", async (req, res, next) => {
 
 module.exports = app;
 
-
 // insert the people (admin) //
 app.post("/add-admin", async (req, res, next) => {
   try {
     const body = req.body;
-    const sql = "INSERT INTO admin_info (username, fname, lname, email) VALUES (?, ?, ?, ?)";
-    const [result] = await connection.promise().query(sql, [body.username, body.firstName, body.lastName, body.email]);
+    const sql =
+      "INSERT INTO admin_info (username, fname, lname, email) VALUES (?, ?, ?, ?)";
+    const [result] = await connection
+      .promise()
+      .query(sql, [body.username, body.firstName, body.lastName, body.email]);
     const adminId = result.insertId;
-    res.status(201).json({ success: true, message: "Admin added successfully.", adminId });
+    res
+      .status(201)
+      .json({ success: true, message: "Admin added successfully.", adminId });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
@@ -123,12 +126,25 @@ app.put("/update-admin/:id", async (req, res, next) => {
   try {
     const adminId = req.params.id;
     const body = req.body;
-    const sql = "UPDATE admin_info SET username = ?, fname = ?, lname = ?, email = ? WHERE id = ?";
-    const [result] = await connection.promise().query(sql, [body.username, body.firstName, body.lastName, body.email, adminId]);
+    const sql =
+      "UPDATE admin_info SET username = ?, fname = ?, lname = ?, email = ? WHERE id = ?";
+    const [result] = await connection
+      .promise()
+      .query(sql, [
+        body.username,
+        body.firstName,
+        body.lastName,
+        body.email,
+        adminId,
+      ]);
     if (result.affectedRows === 0) {
-      return res.status(404).json({ success: false, message: "Admin not found." });
+      return res
+        .status(404)
+        .json({ success: false, message: "Admin not found." });
     }
-    res.status(200).json({ success: true, message: "Admin updated successfully." });
+    res
+      .status(200)
+      .json({ success: true, message: "Admin updated successfully." });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
@@ -141,9 +157,13 @@ app.delete("/delete-admin/:id", async (req, res, next) => {
     const sql = "DELETE FROM admin_info WHERE id = ?";
     const [result] = await connection.promise().query(sql, [adminId]);
     if (result.affectedRows === 0) {
-      return res.status(404).json({ success: false, message: "Admin not found." });
+      return res
+        .status(404)
+        .json({ success: false, message: "Admin not found." });
     }
-    res.status(200).json({ success: true, message: "Admin deleted successfully." });
+    res
+      .status(200)
+      .json({ success: true, message: "Admin deleted successfully." });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

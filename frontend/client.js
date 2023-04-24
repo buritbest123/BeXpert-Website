@@ -26,7 +26,6 @@ routers.get("/expert", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "/html/search.html"));
 });
 
-
 routers.get("/How_to_Use", (req, res) => {
   // Define a handler function for the '/signin' route
   console.log("Request at /How_to_Use");
@@ -68,6 +67,22 @@ routers.post("/submit-login", async (req, res) => {
 
 app.get("/user_management", (request, response) => {
   response.sendFile(path.resolve(__dirname, "html", "user_management.html"));
+});
+
+app.get("/experties_in_detail/:id", (request, response) => {
+  response.sendFile(
+    path.resolve(__dirname, "html", "experties_in_detail.html")
+  );
+});
+
+app.get("/product_management/:id", (request, response) => {
+  response.sendFile(
+    path.resolve(__dirname, "html", "product_management_edit.html")
+  );
+});
+
+app.get("/product_management", (request, response) => {
+  response.sendFile(path.resolve(__dirname, "html", "product_management.html"));
 });
 
 app.listen(3030, () => {
