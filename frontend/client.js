@@ -20,9 +20,9 @@ routers.get("/", (req, res) => {
 });
 
 routers.get("/expert", (req, res) => {
-  // Define a handler function for the '/search' route
-  console.log("Request at /search");
-  console.log("Retrieve a search page");
+  // Define a handler function for the '/expert' route
+  console.log("Request at /expert");
+  console.log("Retrieve a expert page");
   res.status(200).sendFile(path.join(__dirname, "/html/search.html"));
 });
 
