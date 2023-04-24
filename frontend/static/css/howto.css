@@ -8,6 +8,7 @@
     }
       
     .logo {
+        font-family: 'Roboto', sans-serif;
         color: aliceblue;
         margin-top: 60px;
         margin-bottom: 160px;
@@ -29,10 +30,12 @@
         /* border: solid black 2px; */
     }
     #company{
+        font-family: 'Roboto', sans-serif;
         text-align: center;
     }
 
     #user{
+        font-family: 'Roboto', sans-serif;
         text-align: center;
     }
     #comhow{
@@ -40,6 +43,10 @@
     }
     #userhow{
         width: 100%;
+    }
+
+    .desfont {
+        font-family: 'Open Sans', sans-serif;
     }
 
 
@@ -55,16 +62,19 @@
     }
       
     .logo {
+        font-family: 'Roboto', sans-serif;
         color: aliceblue;
         margin-top: 60px;
         margin-bottom: 160px;
     }
 
     #company{
+        font-family: 'Roboto', sans-serif;
         text-align: center;
     }
 
     #user{
+        font-family: 'Roboto', sans-serif;
         text-align: center;
     }
     .container {
@@ -87,6 +97,10 @@
     }
     #userhow{
         width: 100%;
+    }
+
+    .desfont {
+        font-family: 'Open Sans', sans-serif;
     }
 
 }

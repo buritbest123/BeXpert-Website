@@ -19,12 +19,13 @@ routers.get("/", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "/html/index.html"));
 });
 
-routers.get("/search", (req, res) => {
+routers.get("/expert", (req, res) => {
   // Define a handler function for the '/search' route
   console.log("Request at /search");
   console.log("Retrieve a search page");
   res.status(200).sendFile(path.join(__dirname, "/html/search.html"));
 });
+
 
 routers.get("/How_to_Use", (req, res) => {
   // Define a handler function for the '/signin' route
