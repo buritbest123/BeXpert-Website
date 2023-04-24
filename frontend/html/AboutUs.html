@@ -59,117 +59,39 @@
         <!-- Table for member -->
         <!-- INFO 1 (Navaluck)-->
         <div class="div-responsive-table">
-        <article class="container">
-            <article class="column">
-                <div class="bannerimage" alt="Responsive image">
-                    <!-- product profile -->
-                    <img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1rzSfO_M0B2pdBrRWPgrrNO89Z4e7rOve" width="200" height="200">
-                </div>
-                <br>
-                <!-- Name Title -->
-                <h4 class="desfontname">Navaluck Duwa</h4>
-                <!-- add email -->
-                <a href = "mailto: tanushka.duwa@outlook.com" class="desfontname">tanushka.duwa@outlook.com</a>
-                <!-- about text-->
-                <section class="dummy_text desfont">
-                    Navaluck Duwa (Janice) a sophomore at the Faculty of ICT, Mahidol University. 
-                    she is a detailed and responsible person also a team player, where she serves as President of the MUICT Speakers Club. 
-                    Janice is interested in Database where her expected major is Database and Intelligent Systems. 
-                     
-                </section>
-            </article>
-        <!-- </article> -->
-
-        <!-- INFO 2 (Ramita)-->
-        <!-- <article class="container"> -->
-            <article class="column">
-                <div class="bannerimage" alt="Responsive image">
-                    <!-- product profile -->
-                    <img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1L93ySujh_CoF-RKcd_fn_lYKRJHYxI6O" width="200" height="200">
-                </div>
-                <br>
-                <!-- Name Title-->
-                <h4 class="desfontname">Ramita Deeprom</h4>
-                <!-- Email-->
-                <a href = "mailto: ramita.deeprom@gmail.com" class="desfontname">ramita.deeprom@gmail.com</a>
-                <!-- about text -->
-                <section class="dummy_text desfont">
-                    Ramita Deeprom (Tingting) a sophomore at the Faculty of ICT, Mahidol University.
-                    with a keen interest in Business Analyst and software. Her passion for learning and experimenting with new things 
-                    extends beyond technology and includes business and psychology. Her expected major is Software Engineering.
-
-                </section>
-            </article>
-        <!-- </article> -->
-
-        <!-- INFO 3 (Phawida) --> 
-        <!-- <article class="container"> -->
-            <article class="column">
-                <div class="bannerimage" alt="Responsive image">
-                    <!-- profile picture-->
-                    <img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1Kldb68Qs1Jg66yekVGhTUIRWvXmZkaCY" width="200" height="200">
-                </div>
-                <br>
-                <!-- Title Name -->
-                <h4 class="desfontname">Phawida Phungchuen</h4>
-                <!-- Email -->
-                <a href = "mailto: Phawidabery@gmail.com" class="desfontname">Phawidabery@gmail.com</a>
-                <!-- about text -->
-                <section class="dummy_text desfont">
-                    Phawida Phungchuen (Berry) a sophomore at the Faculty of ICT, Mahidol University.
-                    She has a passion for programming started at a young age, and she achieved high scores on the projects in 
-                    C, SQL and HTML. Her expected major is Database and Intelligent Systems.
-                </section>
-            </article>
-        <!-- </article> -->
-    
-        <!-- INFO 4 (Burit) -->
-        <!-- <article class="container"> -->
-            <article class="column">
-                <div class="bannerimage" alt="Responsive image">
-                    <!-- profile picture -->
-                    <img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1kGC-zQpll7fLaMvZw7ZoJJWqe0CplsE2" width="200" height="200">
-                </div>
-                <br>
-                <!-- Name -->
-                <h4 class="desfontname">Burit Sihabut</h4>
-                <!-- email-->
-                <a href = "mailto: burit.sih@gmail.com" class="desfontname">burit.sih@gmail.com</a>
-                <!-- About text -->
-                <section class="dummy_text desfont">
-                    Burit Sihabut (Best) a sophomore at the Faculty of ICT, Mahidol University.
-                    He is a passionate software engineer who combines logic and creativity to provide the best solutions possible. 
-                    Best takes pride in their attention to detail, responsibility, critical thinking skills, and strong analytical 
-                    abilities. His expected major is Software Engineering.
-                </section>
-            </article>
-        <!-- </article> -->
-
-        <!-- INFO 5 -->
-        <!-- <article class="container"> -->
-            <article class="column">
-                <div class="bannerimage" alt="Responsive image">
-                    <!-- product profile -->
-                    <img class="profile-picture" src="https://drive.google.com/uc?export=view&id=1366kzRVwQ3doo3OEjeHroJ0hGuXCN-Rt" width="200" height="200">
-                </div>
-                <br>
-                <!-- Name -->
-                <h4 class="desfontname">Suwiboon Chamniwikaikangwan</h4>
-                <!-- email-->
-                <a href = "mailto: suwiboon.cha@outlook.com" class="desfontname">suwiboon.cha@outlook.com</a>
-                <!-- About text -->
-                <section class="dummy_text desfont">
-                    Suwiboon Chamniwikaikangwan (Pond) a sophomore at the Faculty of ICT, Mahidol University.
-                    He is an expert in graphic design where he had experience graphic design, video editing, web design, photography, 
-                    short film production, streaming, and YouTube creation. Aside from that He has also developed valuable soft skill, 
-                    programming, crirical thinking and public Speaking. His expected major is Multimedia 
-                </section>
-            </article>
-        </article>
+        <article class="container" id="container"></article>
 
         <!-- footer -->
     <footer id="nav_footer" style="width: 100%;"></footer>
-
+    <script>
+        $(function () {
+          const boxexpert = $("#container");
+          boxexpert.html("");
+          fetch("http://localhost:3000/expert").then((res) => {
+            res.json().then((data) => {
+              if (data.success) {
+                for (let index = 0; index < 5; index++) {
+                  const expert = data.datas[index];
+                  const expertElement = document.createElement("article");
+                  expertElement.className = "column";
+                  expertElement.innerHTML = `
+                <div class="bannerimage" alt="Responsive image">
+                <img class="profile-picture" src="${expert.pic_link}" width="200" height="200">
+                </div>
+                <br>
+                <h4 class="desfontname">${expert.fname} ${expert.lname}</h4>
+                <a href = "mailto: ${expert.email}" class="desfontname">${expert.email}</a>
+                <section class="dummy_text desfont">
+                    ${expert.about}
+                </section>
+                </article>`;
+                  boxexpert.append(expertElement);
+                }
+              }
+            });
+          });
+        });
+      </script>
     </body>
 </html>
 
