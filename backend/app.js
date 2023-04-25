@@ -93,86 +93,44 @@ app.post("/login-auth", (request, response) => {
 });
 
 //Search
-app.get("/expert", (request, response) => {
-  const { filter, search_value } = request.query;
+// app.get("/expert", (request, response) => {
+//   const { filter, search_value } = request.query;
 
-  // console.log("hello");
-  let sql;
-  let query;
-  if (filter === "") {
-    sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "skills") {
-    sql = `SELECT * FROM expert WHERE 
-           skills LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "bio") {
-    sql = `SELECT * FROM expert WHERE 
-           about LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "name") {
-    sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR 
-           lname LIKE ?`;
-    query = `%${search_value}%`;
-  } else {
-    // Invalid search choice
-    response.status(400).send("Invalid search choice");
-    return;
-  }
+//   let sql;
+//   let query;
+//   if (filter === "bio" || filter === "skills" || filter === "name") {
+//     sql = `SELECT * FROM expert WHERE 
+//            fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
+//     query = `%${search_value}%`;
+//   } else if (filter === "skills") {
+//     sql = `SELECT * FROM expert WHERE 
+//            skills LIKE ?`;
+//     query = `%${search_value}%`;
+//   } else if (filter === "bio") {
+//     sql = `SELECT * FROM expert WHERE 
+//            about LIKE ?`;
+//     query = `%${search_value}%`;
+//   } else if (filter === "name") {
+//     sql = `SELECT * FROM expert WHERE 
+//            fname LIKE ? OR 
+//            lname LIKE ?`;
+//     query = `%${search_value}%`;
+//   } else {
+//     // Invalid search choice
+//     response.status(400).send("Invalid search choice");
+//     return;
+//   }
 
-  connection.query(sql, [query, query], (err, results, fields) => {
-    if (err) {
-      console.error("Error querying database: " + err.stack);
-      response.status(500).send("Error querying database");
-      return;
-    }
+//   connection.query(sql, [query, query], (err, results, fields) => {
+//     if (err) {
+//       console.error("Error querying database: " + err.stack);
+//       response.status(500).send("Error querying database");
+//       return;
+//     }
 
-    // Send the search results back to the client as JSON
-    response.json(results);
-  });
-});
-
-//Search
-app.get("/expert", (request, response) => {
-  const { filter, search_value } = request.query;
-
-  let sql;
-  let query;
-  if (filter === "bio" || filter === "skills" || filter === "name") {
-    sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "skills") {
-    sql = `SELECT * FROM expert WHERE 
-           skills LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "bio") {
-    sql = `SELECT * FROM expert WHERE 
-           about LIKE ?`;
-    query = `%${search_value}%`;
-  } else if (filter === "name") {
-    sql = `SELECT * FROM expert WHERE 
-           fname LIKE ? OR 
-           lname LIKE ?`;
-    query = `%${search_value}%`;
-  } else {
-    // Invalid search choice
-    response.status(400).send("Invalid search choice");
-    return;
-  }
-
-  connection.query(sql, [query, query], (err, results, fields) => {
-    if (err) {
-      console.error("Error querying database: " + err.stack);
-      response.status(500).send("Error querying database");
-      return;
-    }
-
-    // Send the search results back to the client as JSON
-    response.json(results);
-  });
-});
+//     // Send the search results back to the client as JSON
+//     response.json(results);
+//   });
+// });
 
 app.listen(PORT, () => console.log(`Server is litening on ${PORT} ⚡`));

@@ -32,7 +32,7 @@ app.post("/", async (req, res, next) => {
         .json({ success: false, message: "Email is already in use." });
     }
     const insert = `INSERT INTO admin_info(username,fname,lname,email,phone,address,bdate,psw,role) VALUES(?,?,?,?,?,?,?,?,?)`;
-    await connection
+    const insertedUser = await connection
       .promise()
       .query(insert, [
         body.username,
@@ -45,10 +45,11 @@ app.post("/", async (req, res, next) => {
         body.password,
         "Admin",
       ]);
+
     const insert_login = `INSERT INTO login_info(email,psw) VALUES(?,?)`;
     await connection.promise().query(insert_login, [body.email, body.password]);
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true,insertedId: insertedUser[0].insertId });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
@@ -61,7 +62,7 @@ app.put("/:id", async (req, res, next) => {
     const sql = "SELECT * FROM admin_info where id = ? limit 1";
     const [rows] = await connection.promise().query(sql, [id]);
     if (rows.length > 0) {
-      const updateAdmin = `UPDATE admin_info SET username = ?,fname = ?,lname = ?,address = ?,phone = ?,bdate = ? WHERE id = ?;`;
+      const updateAdmin = `UPDATE admin_info SET username = ?,fname = ?,lname = ?,address = ?,phone = ?, psw = ?,bdate = ? WHERE id = ?;`;
       await connection
         .promise()
         .query(updateAdmin, [
@@ -70,6 +71,7 @@ app.put("/:id", async (req, res, next) => {
           body.lastName,
           body.address,
           body.phone,
+          body.password,
           moment(body.BDAge).format("YYYY-MM-DD"),
           id,
         ]);
@@ -134,7 +136,7 @@ app.put("/update-admin/:id", async (req, res, next) => {
         body.username,
         body.firstName,
         body.lastName,
-        body.email,
+        body.email, 
         adminId,
       ]);
     if (result.affectedRows === 0) {

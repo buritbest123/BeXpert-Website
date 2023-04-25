@@ -7,7 +7,7 @@ CREATE TABLE `admin_info`
 (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar
-(50) COLLATE utf8mb3_slovenian_ci NOT NULL,
+(50) COLLATE utf8mb3_slovenian_ci,
   `fname` varchar
 (100) COLLATE utf8mb3_slovenian_ci NOT NULL,
   `lname` varchar
