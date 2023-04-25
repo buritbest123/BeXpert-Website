@@ -12,7 +12,7 @@ app.get(
 app.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/success",
+    successRedirect: "http://localhost:3030",
     failureRedirect: "/login",
     failureFlash: true,
   })
