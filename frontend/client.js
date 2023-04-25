@@ -14,6 +14,13 @@ app.use("/", express.static(path.join(__dirname, "/static")));
 
 routers.get("/", (req, res) => {
   // Define a handler function for the '/' route
+  console.log("Request at /");
+  console.log("Retrieve a login page");
+  res.status(200).sendFile(path.join(__dirname, "/html/login.html"));
+});
+
+routers.get("/index", (req, res) => {
+  // Define a handler function for the '/' route
   console.log("Request at /index");
   console.log("Retrieve a home page");
   res.status(200).sendFile(path.join(__dirname, "/html/index.html"));
@@ -57,7 +64,7 @@ routers.post("/submit-login", async (req, res) => {
       if (response.status === 200) {
         // const data = result.data;
         console.log("Hello admin!");
-        res.redirect("/user_management");
+        res.redirect("/index");
       }
     })
     .catch((err) => {
