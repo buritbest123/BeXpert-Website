@@ -1,14 +1,22 @@
+// Get the ID from the URL path
 let id = location.pathname.split("/")[2];
+
+
 $(function () {
+  // Set the form action URL to the current expert's ID
   $("#form_id").attr("action", "http://localhost:3000/expert/" + id);
+  // Fetch the expert's data using their ID
   fetch("http://localhost:3000/expert/" + id).then((res) => {
     res.json().then((data) => {
       if (data.success) {
+        // Retrieve the expert's details and split their skills into an array
         let detail = data.datas[0];
         let skills = detail.skills.split(";");
+        // Loop through each skill and split them into their respective category
         skills.forEach((skill) => {
           let list = skill.trim().split(":");
           switch (list[0].trim()) {
+            // If the skill is a soft skill, set the values of the soft-skill form fields
             case "Soft Skills":
               list[1].split(",").forEach((s, i) => {
                 $("#soft-skill" + (i + 1)).val(s.trim());
@@ -61,6 +69,7 @@ $(function () {
     });
   });
 });
+
 $("#form_id").validate({
   submitHandler: function (form) {
     postData();

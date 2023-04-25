@@ -1,8 +1,12 @@
+// Import required packages
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+
+// Retrieve Google API client ID and secret from environment variables
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_SECRET;
 
+// Set up Google authentication strategy
 passport.use(
   new GoogleStrategy(
     {
@@ -17,6 +21,7 @@ passport.use(
   )
 );
 
+// Serialize and deserialize user
 passport.serializeUser((user, done) => {
   done(null, user);
 });
