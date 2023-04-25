@@ -69,19 +69,3 @@ document.addEventListener("DOMContentLoaded", function () {
     registerForm.classList.add("was-validated");
   });
 });
-
-function auth() {
-  // Get the values of the email and password inputs
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  // If the email and password are correct, redirect to the user management page and show an alert
-  if (email == "admin@gmail.com" && password == "admin123") {
-    window.location.assign("../html/user_management.html");
-    alert("Login Successfully");
-  }
-  // Otherwise, show an alert indicating that the information is invalid and return to the login page
-  else {
-    alert("Invalid Information");
-    return;
-  }
-}
