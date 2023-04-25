@@ -1,3 +1,4 @@
+// Import required dependencies
 const express = require("express");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
@@ -5,17 +6,28 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
+
+// Configure dotenv
 dotenv.config();
+
+// Import Passport authentication module
 const passport = require("./passport");
 
+// Define PORT and create Express app instance
 const PORT = process.env.PORT || 3000;
 const app = express();
+
+// Enable Cross-Origin Resource Sharing (CORS)
 app.use(cors());
 
+// Parse request bodies as JSON
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Parse cookies
 app.use(cookieParser());
+
+// Enable sessions
 app.use(
   session({
     secret: process.env.SECRET,
@@ -23,20 +35,31 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+// Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Serve static files from the public directory
 const publicDir = path.join(__dirname, "./public");
 app.use(express.static(publicDir));
 
+// Import routes
 const route_authen = require("./routes/authen");
 const route_admin = require("./routes/admin");
 const route_expert = require("./routes/expert");
+
+// Serve the index.html file at the root path
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
+
+// Handle authentication errors
 app.get("/error", (req, res, next) => {
   res.status(403).json({ status: false, message: "Authentication error" });
 });
+
+// Serve the profile.html file on successful login
 app.get("/success", (req, res, next) => {
   if (req.user) {
     res.sendFile(path.join(publicDir, "/profile.html"));
@@ -44,10 +67,13 @@ app.get("/success", (req, res, next) => {
     res.redirect("/");
   }
 });
+
+// Mount routes
 app.use("/auth", route_authen);
 app.use("/admin", route_admin);
 app.use("/expert", route_expert);
 
+// Configure database connection
 const mysql = require("mysql2");
 const db = mysql.createConnection({
   host: process.env.MYSQL_HOST,
@@ -56,17 +82,18 @@ const db = mysql.createConnection({
   database: process.env.MYSQL_DATABASE,
 });
 
-//DB on connect
+// Connect to the database
 db.connect(function (err) {
   if (err) throw err;
   console.log("Connected DB: " + process.env.MYSQL_DATABASE);
 });
 
-//Login
+// Handle login requests (Login)
 app.post("/login-auth", (request, response) => {
   const { email, password } = request.body;
 
   console.log(email);
+  // Query the database for the user with the given email
   db.query(
     `SELECT * FROM login_info Where email LIKE '%${email}%'`,
     (error, results, fields) => {
@@ -79,6 +106,7 @@ app.post("/login-auth", (request, response) => {
       } else if (results.length === 0) {
         response.status(404).json({ Message: "User does not exist." });
       } else if (password === results[0].psw) {
+        // Set the loggedIn flag in the user's session
         request.session.loggedIn = true;
         console.log(request.session.loggedIn); // add this line to check if the flag is being set correctly
         request.session.user = email;
@@ -91,46 +119,5 @@ app.post("/login-auth", (request, response) => {
     }
   );
 });
-
-//Search
-// app.get("/expert", (request, response) => {
-//   const { filter, search_value } = request.query;
-
-//   let sql;
-//   let query;
-//   if (filter === "bio" || filter === "skills" || filter === "name") {
-//     sql = `SELECT * FROM expert WHERE 
-//            fname LIKE ? OR lname LIKE ? OR skills LIKE ? OR about LIKE ?`;
-//     query = `%${search_value}%`;
-//   } else if (filter === "skills") {
-//     sql = `SELECT * FROM expert WHERE 
-//            skills LIKE ?`;
-//     query = `%${search_value}%`;
-//   } else if (filter === "bio") {
-//     sql = `SELECT * FROM expert WHERE 
-//            about LIKE ?`;
-//     query = `%${search_value}%`;
-//   } else if (filter === "name") {
-//     sql = `SELECT * FROM expert WHERE 
-//            fname LIKE ? OR 
-//            lname LIKE ?`;
-//     query = `%${search_value}%`;
-//   } else {
-//     // Invalid search choice
-//     response.status(400).send("Invalid search choice");
-//     return;
-//   }
-
-//   connection.query(sql, [query, query], (err, results, fields) => {
-//     if (err) {
-//       console.error("Error querying database: " + err.stack);
-//       response.status(500).send("Error querying database");
-//       return;
-//     }
-
-//     // Send the search results back to the client as JSON
-//     response.json(results);
-//   });
-// });
 
 app.listen(PORT, () => console.log(`Server is litening on ${PORT} ⚡`));
