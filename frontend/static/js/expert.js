@@ -8,7 +8,7 @@ function search() {
   let searchKey = $("#filter").val();
   $("#search-option option:selected").each(function () {
     if ($(this).val() !== "") {
-      search_option = $(this).text().toLowerCase();
+      search_option = $(this).val().toLowerCase();
     }
   });
 
