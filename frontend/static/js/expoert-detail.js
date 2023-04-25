@@ -1,11 +1,17 @@
 $(function () {
+  // Get the id of the expert from the URL path
   let id = location.pathname.split("/")[2];
+  // Set the href attribute of the edit button to the URL for editing this expert
   $("#edit").attr("href", "/product_management/" + id);
+  // Fetch expert details from the server
   fetch("http://localhost:3000/expert/" + id).then((res) => {
     res.json().then((data) => {
+      // If the fetch was successful
       if (data.success) {
+        // Extract skill data from the fetched expert details
         let detail = data.datas[0];
         let skillData = {
+          // Categorize each skill into the appropriate skill type
           SoftSkills: [],
           LanguageSkills: [],
           ComputerSkills: [],
@@ -43,6 +49,7 @@ $(function () {
           }
         });
 
+        // Update the expert details in the HTML
         $("#bannerimage").attr(
           "style",
           "background-image: url(" +
@@ -62,16 +69,19 @@ $(function () {
         $("#email").html(detail.email);
         $("#mobile_num").html(detail.mobile_num);
 
+        // Update the skill table in the HTML - top 3 skills
         let maxlen = 3;
         for (let index = 0; index < maxlen; index++) {
           let str = `<tr>`;
           str += `<td>${index + 1}</td>`;
+          // The table row consists of five columns: the skill number, SoftSkills, LanguageSkills, ComputerSkills, and DataArea.
           str += `<td>${skillData["SoftSkills"][index] || ""}</td>`;
           str += `<td>${skillData["LanguageSkills"][index] || ""}</td>`;
           str += `<td>${skillData["ComputerSkills"][index] || ""}</td>`;
           str += `<td>${skillData["DataArea"][index] || ""}</td>`;
           str += `</tr>`;
           if (
+            // The table rows are appended to the table with index 'table'.
             skillData["SoftSkills"][index] ||
             skillData["LanguageSkills"][index] ||
             skillData["ComputerSkills"][index] ||
@@ -83,6 +93,8 @@ $(function () {
     });
   });
 });
+
+// The cancel() function redirects the user to the expert page.
 function cancel() {
   window.open("/expert", "_self");
 }

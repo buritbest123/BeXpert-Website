@@ -1,12 +1,17 @@
+// Validate the form and submit the data if valid
 $("#form_id").validate({
   submitHandler: function (form) {
     postData();
   },
 });
+
+// Validate the form and submit the data if valid
 function postData() {
+  // Check if form is valid before submitting
   if (!$("#form_id").valid()) {
     return false;
   }
+  // Get form data and store in an object
   let formData = {
     firstname: $("#firstname").val(),
     lastname: $("#lastname").val(),
@@ -32,6 +37,7 @@ function postData() {
     pic_link: $("#pic_link").val(),
     bg_link: $("#bg_link").val(),
   };
+  // Send the form data to the server
   fetch("http://localhost:3000/expert", {
     method: "POST",
     headers: {
@@ -40,10 +46,13 @@ function postData() {
     },
     body: JSON.stringify(formData),
   }).then((res) => {
+    // Handle the response from the server
     res.json().then((data) => {
       if (data.success) {
+        // If the form submission was successful, redirect to the expert page
         window.open("/expert", "_self");
       } else {
+        // If the form submission failed, display an error message
         alert(data.message);
       }
     });
