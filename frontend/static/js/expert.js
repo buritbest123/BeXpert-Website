@@ -19,6 +19,9 @@ function search() {
   if (search_option !== "" && filter !== "") {
     url += "&search=" + searchKey;
   }
+  if (search_option === "") {
+    url += "?filter=name,skills,about&search="; // ?? work
+  }
 
   fetch(url, {
     method: "GET",
@@ -35,14 +38,14 @@ function search() {
           <div class="rounded"><img src="${expert.pic_link}" width="50px"></div>
           <h3>${expert.fname}  ${expert.lname}</h3>
           <section>${expert.about}</section>
-          <a href="/experties_in_detail/${expert.id}">Learn More</a> 
+          <a href="/experties_in_detail/${expert.id}">Learn More</a> &nbsp;&nbsp;
           <a class="text-danger" onclick="deleteModel(${expert.id}, '${expert.fname} ${expert.lname}')" style="cursor: pointer;">Delete</a>`;
           boxexpert.append(expertElement);
         });
       } else {
         const expertElement = document.createElement("article");
         expertElement.className = "column text-center";
-        expertElement.innerHTML = `ไม่พบข้อมูล`;
+        expertElement.innerHTML = `No data found`;
         boxexpert.append(expertElement);
       }
     });
