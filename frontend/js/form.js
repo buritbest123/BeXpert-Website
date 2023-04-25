@@ -58,14 +58,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Perform final validation on submit
     validateUsername();
     validatePassword();
-
-    if (registerForm.checkValidity()) {
-      // TODO: Submit form data to server using AJAX or Fetch (wait for study)
-      // If successful, redirect to login page after 2 seconds
-      successMessage.classList.remove("d-none");
-      setTimeout(redirectToLogin, 2000);
-    }
-    // Add a class to the form to indicate that it has been validated
-    registerForm.classList.add("was-validated");
   });
 });
