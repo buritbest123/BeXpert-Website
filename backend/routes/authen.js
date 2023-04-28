@@ -1,23 +1,24 @@
 // Import required packages and modules
-const app = require("express").Router();
-const moment = require("moment");
-const { connection } = require("../db");
-const isLogin = require("../isLogin");
-const passport = require("../passport");
+const app = require("express").Router(); // Import the Router object from the express module and create a new router object
+const moment = require("moment"); // Import the moment module for working with dates and times
+const { connection } = require("../db"); // Import the connection object from the db module
+const isLogin = require("../isLogin"); // Import the isLogin middleware for checking if a user is logged in
+const passport = require("../passport"); // Import the passport module for user authentication
 
 // Route for initiating Google authentication process
 app.get(
   "/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", { scope: ["profile", "email"] }) // Use the passport middleware to authenticate the user using their Google account, with access to their profile and email information
 );
 
 // Route for handling Google authentication callback
 app.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3030/index",
-    failureRedirect: "/login",
-    failureFlash: true,
+    // Use the passport middleware to authenticate the user using their Google account
+    successRedirect: "http://localhost:3030/index", // Redirect the user to the home page upon successful authentication
+    failureRedirect: "/login", // Redirect the user to the login page upon authentication failure
+    failureFlash: true, // Set the failure flash message to true to enable flash messages
   })
 );
 
