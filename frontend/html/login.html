@@ -4,30 +4,39 @@
     <title>BeXpert</title>
 
     <!-- CSS File -->
+    <!-- Importing CSS file for form styling -->
     <link rel="stylesheet" href="../css/form.css">
 
     <!-- Boostrap -->
     <!-- Importing Bootstrap CSS and Font Awesome for icons -->
+    <!-- Setting the character set and viewport -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Importing Bootstrap CSS file from a CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importing Font Awesome icons CSS file from a CDN -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Importing Bootstrap JS file from a CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/"></script>
 </head>
 
 <body>
     <!-- Navigation bar -->
+    <!-- Creating a navigation bar with the BeXpert logo -->
     <nav>
         <img src="../picture/BEX_logo.png" height="40px" width="40px" alt="profile-picture">
     </nav>
 
     <!-- Login form -->
+    <!-- Creating a login form -->
     <div class="FillIn">
+        <!-- Adding the BeXpert login logo to the form -->
         <h1 class="text-center"><img src="../picture/Logo_login_register.png" width="80px"></h1>
         <form action="/submit-login" method="POST">
 
         <!-- Input field for email address -->
+            <!-- Creating a form group for the email input field with validation feedback -->
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
                 <input class="form-control" type="email" id="email" name="email" required >
@@ -36,6 +45,7 @@
             </div>
         
         <!-- Input field for Password -->
+            <!-- Creating a form group for the password input field with validation feedback -->
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
                 <input class="form-control" type="password" id="password" name="password" required>
@@ -44,13 +54,16 @@
             </div>
 
         <!-- This is a submit button -->
+            <!-- Creating a submit button with a click event listener -->
             <input class="btn btn-success w-100" type="submit" value="Sign In" onclick="auth()">
         </form>
+        <!-- Adding a horizontal line to separate the sign in form from the Google login button -->
         __________________________________ <br><br>
         <center>
+        <!-- Creating a button to login with Google using OAuth -->
         <a href="http://localhost:3000/auth/google" class="btn btn-danger"><span class="fa fa-lock"></span> Login with Google</a>
         </center>
-        <!-- This code block creates a text link to the registration page. -->
+        <!-- Adding a text link to the registration page -->
         <div class="text-center mt-3">Don't have an account? <a href="register.html" class="text-decoration-none">Sign Up</a></div>
     </div>
 </body>
