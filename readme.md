@@ -1,46 +1,54 @@
-# BeXpert readme
+# BeXpert README
 
-**How to run code**
+This document provides an overview of the BeXpert project and instructions on how to run the code. 
 
-- To access the code. you can change the directory to bexpert then change directory to both frontend and backend andtype npm start into your terminal. Node.js will listen on port 3000 and 3030.
-  - After starting the server, you can type http://localhost:3000/ (For Back-end)and http://localhost:3030/ (For Front-end) URL in your web browser to access our homepage.
+## How to Run the Code
 
-## Home Page ([index.html](https://github.com/buritbest321/BeXpert-Website/blob/main/html/index.html)):
+To access the code, navigate to the `bexpert` directory and then to either the `frontend` or `backend` directory. Type `npm start` into your terminal. Node.js will listen on ports 3000 and 3030. After starting the server, you can access our homepage by typing the following URLs into your web browser: 
 
-Homepage can go to Search, About Us, How to, Login, and Register and will have some information about the website.
+- http://localhost:3000/ (for the backend)
+- http://localhost:3030/ (for the frontend)
 
-## Search Page ([Search.html](https://github.com/buritbest321/BeXpert-Website/blob/main/html/Serach.html)):
+To configure the database, please update the `.env` file with the appropriate password.
 
-The search will show you all products, and you can choose to filter by name, skills, or experience. You can click "Learn more" to view the full profile.
+## Homepage
 
-## How to Page ([How_to_Use.html](https://github.com/buritbest321/BeXpert-Website/blob/main/html/How_to_Use.html)):
+The homepage (`index.html`) provides information about the website and links to other pages, including Search, About Us, How To, Login, and Register.
 
-Page that demonstrates how to use our website for companies and users who will upload their profiles.
+## Search Page
 
-**For the user (who will be posting their profile)**
+The search page (`Search.html`) displays all available products and allows you to filter by name, skills, or experience. Clicking "Learn more" will display the full profile.
 
-- Login or register to Bexpert
-  - Create a portfolio by adding your personal information
-  - Add Bio Skills, Experience, Education, Skills, Contact, and CV/Resume (add your interest position in the BIO)
-  - Wait for the company to contact you via the provided contact information.
+## How To Page
 
-**For Company**
+The How To page (`How_to_Use.html`) provides instructions on how to use our website for both users and companies. 
 
-- Login or register to Bexpert
-  - Look for the position your company is looking for (search by name, skills, and experience).
-  - Choose the right person for your organization by going to their profile for more information and their CV or resume.
-  - Contact them using the information provided.
+**For Users (Posting Profiles)**
 
-## About Us ([AboutUs.html](https://github.com/buritbest321/BeXpert-Website/blob/main/html/AboutUs.html)):
+- Login or register to BeXpert
+- Create a portfolio by adding your personal information
+- Add Bio, Skills, Experience, Education, Contact, and CV/Resume (add your interest position in the Bio)
+- Wait for companies to contact you via the provided contact information.
 
-Shows you an overview of what we do and also shows the team members who developed the project and websites.
+**For Companies**
 
-## Login ([login.html](https://github.com/buritbest321/BeXpert-Website/blob/main/html/login.html)):
+- Login or register to BeXpert
+- Look for the position your company is looking for (search by name, skills, and experience).
+- Choose the right person for your organization by reviewing their profile and CV/resume.
+- Contact them using the information provided.
 
-- Login with your email and the password you created.
-- To go to the product management page, use the given email and password, and click logout to go back to the homepage.
-  - Admin: Email: admin@gmail.com Password: admin123
+## About Us
 
-**Register:**
+The About Us page (`AboutUs.html`) provides an overview of what we do and displays the team members who developed the project and website.
 
-- Register by filling in the required box.
+## Login
+
+The login page (`login.html`) allows users to log in using their email and password. 
+
+To access the product management page, use the provided email and password and click "Logout" to return to the homepage. 
+
+Admin credentials: Email: admin@gmail.com, Password: admin123
+
+## Register
+
+To register, fill in the required information on the registration page.
