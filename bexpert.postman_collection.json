@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "62c3da1c-f541-4f91-96dd-2e70a0a7067a",
+		"name": "bexpert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26746028"
+	},
+	"item": [
+		{
+			"name": "Google Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@test.test\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"Test\",\n    \"email\": \"test@test.test\",\n    \"address\": \"Bangkok\",\n    \"phone\": \"111-111-1111\",\n    \"BDAge\" : \"2022-12-01\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/admin?filter=username,fname,lname&search=test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "username,fname,lname"
+						},
+						{
+							"key": "search",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"Test\",\n    \"email\": \"test@test.test\",\n    \"address\": \"Bangkok\",\n    \"phone\": \"111-111-1111\",\n    \"BDAge\" : \"2022-12-01\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test1\",\n    \"firstName\": \"Test1\",\n    \"lastName\": \"Test\",\n    \"address\": \"Bangkok\",\n    \"phone\": \"111-111-2222\",\n    \"BDAge\" : \"2022-12-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"Test\",\n    \"address\": \"Bangkok\",\n    \"phone\": \"111-111-2222\",\n    \"BDAge\" : \"2022-12-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expert search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/expert?filter=name,skills,about&search=Burit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"expert"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "name,skills,about"
+						},
+						{
+							"key": "search",
+							"value": "Burit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expert insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\":\"Ramita2\",\n    \"lastname\":\"Deeprom2\", \n    \"about\":\"Ramita Deeprom (Tingting) a sophomore at the Faculty of ICT, Mahidol University, with a keen interest in Business Analyst and software. Her passion for learning and experimenting with new things extends beyond technology and includes business and psychology.Her expected major is Software Engineering.\",\n    \"edu_highschool\":\"Chonkanyanukoon School, Engineering and Applied Mathematics, English program\",\n    \"edu_uni\":\"Faculty of ICT, Mahidol University\",\n    \"skills\":\"Soft Skills: Open minded, Collaboration, Adaptability, Leadership, Decision-Making, Growth mindset, Lifelong learning, Creativity; Technical Skills: Project Managing, Startup Developing, English Language; Programming: HTML5, CSS, JS, C, Java, Python, SQL;\",\n    \"license\":\"123456\",\n    \"email\":\"ramita.deeprom@gmail.com\",\n    \"linkedin\":\"https://www.linkedin.com/in/ramita-deeprom-tingting\",\n    \"mobile_num\":\"086-602-1559\",\n    \"pic_link\":\"https://drive.google.com/uc?export=view&id=1L93ySujh_CoF-RKcd_fn_lYKRJHYxI6O\",\n    \"bg_link\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/expert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"expert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expert update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\":\"Ramita3\",\n    \"lastname\":\"Deeprom3\", \n    \"about\":\"Ramita Deeprom (Tingting) a sophomore at the Faculty of ICT, Mahidol University, with a keen interest in Business Analyst and software. Her passion for learning and experimenting with new things extends beyond technology and includes business and psychology.Her expected major is Software Engineering.\",\n    \"edu_highschool\":\"Chonkanyanukoon School, Engineering and Applied Mathematics, English program\",\n    \"edu_uni\":\"Faculty of ICT, Mahidol University\",\n    \"skills\":\"Soft Skills: Open minded, Collaboration, Adaptability, Leadership, Decision-Making, Growth mindset, Lifelong learning, Creativity; Technical Skills: Project Managing, Startup Developing, English Language; Programming: HTML5, CSS, JS, C, Java, Python, SQL;\",\n    \"license\":\"123456\",\n    \"email\":\"ramita.deeprom@gmail.com\",\n    \"linkedin\":\"https://www.linkedin.com/in/ramita-deeprom-tingting\",\n    \"mobile_num\":\"086-602-1559\",\n    \"pic_link\":\"https://drive.google.com/uc?export=view&id=1L93ySujh_CoF-RKcd_fn_lYKRJHYxI6O\",\n    \"bg_link\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/expert/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"expert",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expert delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"firstName\": \"Test\",\n    \"lastName\": \"Test\",\n    \"address\": \"Bangkok\",\n    \"phone\": \"111-111-2222\",\n    \"BDAge\" : \"2022-12-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/expert/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"expert",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"burit.sih@gmail.com\",\r\n    \"psw\": \"Best1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login-auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login-auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
