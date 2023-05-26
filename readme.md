@@ -1,6 +1,7 @@
 # BeXpert README
 
 This document provides an overview of the BeXpert project and instructions on how to run the code. 
+For a visual demonstration of the project, you can watch the [BeXpert Demo Video](https://youtu.be/LoLqtIyFd5U) which provides a detailed description and walkthrough of the features and functionality of BeXpert.
 
 ## How to Run the Code
 
@@ -13,7 +14,7 @@ To configure the database, please update the `.env` file with the appropriate pa
 
 ## Homepage
 
-The homepage (`index.html`) provides information about the website and links to other pages, including Search, About Us, How To, Login, and Register.
+The homepage (`index.html and index.css`) provides information about the website and links to other pages, including Search, About Us, How To, Login, and Register.
 
 ## Search Page
 
@@ -47,7 +48,7 @@ The login page (`login.html`) allows users to log in using their email and passw
 
 To access the product management page, use the provided email and password and click "Logout" to return to the homepage. 
 
-Admin credentials: Email: admin@gmail.com, Password: admin123
+Admin credentials: Email and Password same as login_info in `bexpert.sql`
 
 ## Register
 
