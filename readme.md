@@ -1,4 +1,4 @@
-# 🌟 BeXpert README 🌐
+# 🌟 BeXpert 🌐
 
 This document 📄 provides an overview of the BeXpert project and instructions on how to run the code. 
 For a visual demonstration of the project, you can watch the [🎥 BeXpert Demo Video](https://youtu.be/LoLqtIyFd5U) which provides a detailed description 📜 and walkthrough of the features and functionality of BeXpert.
